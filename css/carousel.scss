@@ -1,0 +1,58 @@
+div.carousel-container{
+    width: 70%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1em;
+    margin: 1em auto;
+
+    .carousel-dots,.carousel-next,.carousel-prev{
+        position: absolute;
+        left: 0;
+    }
+    button{
+        background-color: transparent;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        width: 3em;
+        height: 3em;
+        top: 50%;
+        cursor: pointer;
+        z-index: 5;
+        transform: translateY(-50%);
+        opacity: 0.5;
+
+        &:hover,&:focus{
+            opacity: 1;
+        }
+
+        svg{
+            fill: #000;
+            width: 2em;
+        }
+        &.carousel-prev{
+            left: 5em;
+        }
+        &.carousel-next{
+            right: 5em;
+        }
+    }
+    ul.carousel{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        list-style: none;
+
+        li{
+            margin: 1em auto;
+            width: 100%;
+            flex: none;
+            display: flex;
+        }
+        
+        img{
+            margin: auto;
+            height: 50vh;
+        }
+    }
+}

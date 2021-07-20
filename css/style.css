@@ -1,0 +1,403 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Vazir FD';
+}
+
+body {
+  background-color: #E0F8FF;
+  direction: rtl;
+  overflow-x: hidden;
+}
+
+body > section {
+  width: 90%;
+  margin: 1.5em auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body > section > div:nth-of-type(1) {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body > section > div:nth-of-type(1) a {
+  margin-right: auto;
+}
+
+.badge {
+  background-color: #0055FF;
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  margin: 0 0.5em;
+}
+
+.navbar {
+  background-color: #F3F3F3;
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 80px;
+}
+
+.navbar nav {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar nav a.logo {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  margin-left: 2em;
+}
+
+.navbar nav ul {
+  list-style: none;
+}
+
+.navbar nav ul li {
+  margin: 0 0.5em;
+}
+
+.navbar nav ul li a {
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar nav ul li a svg {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.navbar nav ul li a:hover > svg {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.navbar nav ul li a:hover > div > svg {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.navbar nav ul li a div > svg {
+  margin: 0 0.5em;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.row-reverse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.float-left {
+  margin-right: auto !important;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown ul.dropDownMenu {
+  position: absolute;
+  display: none !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em 2em;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 1em;
+  border: 1px solid #fff;
+  margin-right: 2em;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown ul.dropDownMenu > li.item {
+  margin: .5em;
+  width: 100%;
+}
+
+.dropdown ul.dropDownMenu > li.item a:hover {
+  color: #320afa;
+}
+
+.dropdown ul.dropDownMenu > li.item ul {
+  padding: 1em 3em;
+  margin-top: -2em;
+  margin-right: 7em;
+}
+
+.dropdown ul.dropDownMenu.expand {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+
+.searchBox {
+  position: relative;
+}
+
+.searchBox input {
+  width: 25vw;
+  background-color: #E0E0E0;
+  border: none;
+  outline: none;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.searchBox input::-webkit-search-decoration, .searchBox input::-webkit-search-cancel-button, .searchBox input::-webkit-search-results-button, .searchBox input::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+.searchBox input:valid ~ label {
+  display: none;
+}
+
+.searchBox button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.searchBox label, .searchBox button {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.searchBox label {
+  font-size: 14px;
+  right: 1em;
+  opacity: 0.7;
+}
+
+.searchBox button {
+  left: 1em;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.w-60 {
+  width: 60% !important;
+}
+
+hr {
+  width: 95%;
+  margin: 0 auto;
+  opacity: 0.7;
+}
+
+.align-items-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.align-items-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.cards-container {
+  margin: 1em 0;
+  width: 100%;
+}
+
+.cards-container .card {
+  background-color: #fff;
+  width: 30% !important;
+  height: 370px;
+  border-radius: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 0.5em;
+}
+
+.cards-container .card .cardImage {
+  width: 100%;
+}
+
+.cards-container .card .cardImage img {
+  width: 100%;
+}
+
+.cards-container .card .content {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 1em;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cards-container .card .content .title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.cards-container .card .content > div {
+  width: 95%;
+  margin: 1em auto;
+}
+
+.cards-container .card .content .price-container svg {
+  margin-left: 0.5em;
+}
+
+.cards-container .card .content .price-container .real-price s {
+  width: 100%;
+  text-align: center;
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.cards-container .card .content .price-container .real-price span {
+  margin-right: 0.5em;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: 0 1em;
+  background-color: #FF455B;
+  color: #fff;
+  border-radius: 1em;
+  font-size: 0.8em;
+}
+
+.cards-container .card .content .stars {
+  margin-top: 0.5em;
+}
+
+.cards-container .card .content .bookmark {
+  color: #000;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.cards-container .card .content .bookmark span {
+  margin-top: 0.5em;
+}
+
+.cards-container .card .content .bookmark svg {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.cards-container .card .content .bookmark:hover > svg {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.btn-nobg-primary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #0055FF;
+  text-decoration: none;
+}
+
+.btn-nobg-primary:hover svg {
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
+}
+
+.btn-nobg-primary svg {
+  stroke: #0055FF;
+  margin: 0 0.5em;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+/*# sourceMappingURL=style.css.map */

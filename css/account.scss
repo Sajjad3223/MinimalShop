@@ -1,0 +1,172 @@
+@import 'root';
+
+.account{
+    position: relative;
+    width: 60vw;
+    height: 350px;
+    margin:2em auto ;
+    background-color: #FFF;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    border-radius: 2em;
+    overflow: hidden;
+    .changeForm{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 2em;
+        border-radius: 2em 0 2em 0;
+        text-decoration: none;
+        cursor: pointer;
+        appearance: none;
+        background-color: #00CC88;
+        color: white;
+        z-index: 10;
+        &:hover{
+            background-color: #00BA7C;
+        }
+        &::after{
+            content: 'ایجاد حساب کاربری';
+        }
+        &:checked{
+            background-color: #99BBFF;
+            &:hover{
+                background-color: #6292F2;
+            }
+            &::after{
+                content: 'ورود به حساب کاربری';
+            }
+        }
+
+        & ~ form.login{
+            transform: translate(-50%,-50%);
+        }
+        & ~ form.signup{
+            transform: translate(100%,-50%) skewX(-60deg);
+            visibility: hidden;
+        }
+
+        &:checked ~ form.login{
+            transform: translate(-200%,-50%) skewX(60deg);
+            visibility: hidden;
+        }
+        &:checked ~ form.signup{
+            transform: translate(-50%,-50%);
+            visibility: visible;
+        }
+    }
+
+    form{
+        position: absolute;
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        margin: 0 1em;
+        transition: transform 0.5s ease,visibility 0.2s;
+        div{
+            margin: .75em 0;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            label{
+                width: 30%;
+                text-align: center;
+            }
+            input:not(input[type=checkbox]){
+                box-sizing: border-box;
+                width: 70%;
+                appearance: none;
+                border: none;
+                outline: none;
+                background-color: #eee;
+                padding: 1em;
+                border-radius: 1em;
+                text-align: center;
+                &[type=tel]{
+                    direction: ltr;
+                }
+
+                &:focus{
+                    border: 1px solid $primary-color;
+                }
+
+                &::placeholder{
+                    color: #000;
+                    opacity: 0.5;
+                }
+            }
+            &.remember-forget{
+                width: 70%;
+                div{
+                    position: relative;
+                    align-items: center;
+                    svg{
+                        position: absolute;
+                        pointer-events: none;
+                        &#checked{fill: $primary-color; display: none;}
+                        &#unchecked{
+                            path{
+                                &:nth-child(1){fill: $primary-color;}
+                                &:nth-child(2){stroke: $primary-color;}
+                            }
+
+                        }
+                    }
+                    input{
+                        appearance: none;
+                        outline: none;
+                        width: 2em;
+                        height: 2em;
+                        border-radius: 0.5em;
+                        border: 2px solid $primary-color;
+                        opacity: 0;
+                        cursor: pointer;
+
+                        &:checked {
+                            & ~ svg#unchecked{
+                                display: none;
+                            }
+                            & ~ svg#checked{
+                                display: block;
+                            }
+                        }
+                    }
+                    label { width: 70%;}
+                }
+                a{
+                    color: $primary-color;
+                    text-align: center;
+                }
+            }
+
+        }
+        button{
+            margin: .5em 0;
+            background-color: $primary-color;
+            color: #fff;
+            border: none;
+            outline: none;
+            width: 70%;
+            margin-right: auto;
+            padding: 1em;
+            border-radius: 1em;
+            cursor: pointer;
+            
+            &:focus{
+                border: 1px solid #000;
+            }
+
+            &:hover{
+                background-color: #0043CA;
+            }
+
+            &#signUpButton{
+                background-color: #00CC88;
+                &:hover{
+                    background-color: #00B277;
+                }
+            }
+        }
+
+    }
+}

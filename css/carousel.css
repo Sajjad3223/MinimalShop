@@ -1,0 +1,70 @@
+div.carousel-container {
+  width: 70%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1em;
+  margin: 1em auto;
+}
+
+div.carousel-container .carousel-dots, div.carousel-container .carousel-next, div.carousel-container .carousel-prev {
+  position: absolute;
+  left: 0;
+}
+
+div.carousel-container button {
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  width: 3em;
+  height: 3em;
+  top: 50%;
+  cursor: pointer;
+  z-index: 5;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0.5;
+}
+
+div.carousel-container button:hover, div.carousel-container button:focus {
+  opacity: 1;
+}
+
+div.carousel-container button svg {
+  fill: #000;
+  width: 2em;
+}
+
+div.carousel-container button.carousel-prev {
+  left: 5em;
+}
+
+div.carousel-container button.carousel-next {
+  right: 5em;
+}
+
+div.carousel-container ul.carousel {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+div.carousel-container ul.carousel li {
+  margin: 1em auto;
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.carousel-container ul.carousel img {
+  margin: auto;
+  height: 50vh;
+}
+/*# sourceMappingURL=carousel.css.map */

@@ -1,0 +1,232 @@
+@charset "UTF-8";
+.account {
+  position: relative;
+  width: 60vw;
+  height: 350px;
+  margin: 2em auto;
+  background-color: #FFF;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  border-radius: 2em;
+  overflow: hidden;
+}
+
+.account .changeForm {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 2em;
+  border-radius: 2em 0 2em 0;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #00CC88;
+  color: white;
+  z-index: 10;
+}
+
+.account .changeForm:hover {
+  background-color: #00BA7C;
+}
+
+.account .changeForm::after {
+  content: 'ایجاد حساب کاربری';
+}
+
+.account .changeForm:checked {
+  background-color: #99BBFF;
+}
+
+.account .changeForm:checked:hover {
+  background-color: #6292F2;
+}
+
+.account .changeForm:checked::after {
+  content: 'ورود به حساب کاربری';
+}
+
+.account .changeForm ~ form.login {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.account .changeForm ~ form.signup {
+  -webkit-transform: translate(100%, -50%) skewX(-60deg);
+          transform: translate(100%, -50%) skewX(-60deg);
+  visibility: hidden;
+}
+
+.account .changeForm:checked ~ form.login {
+  -webkit-transform: translate(-200%, -50%) skewX(60deg);
+          transform: translate(-200%, -50%) skewX(60deg);
+  visibility: hidden;
+}
+
+.account .changeForm:checked ~ form.signup {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  visibility: visible;
+}
+
+.account form {
+  position: absolute;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  margin: 0 1em;
+  -webkit-transition: visibility 0.2s,-webkit-transform 0.5s ease;
+  transition: visibility 0.2s,-webkit-transform 0.5s ease;
+  transition: transform 0.5s ease,visibility 0.2s;
+  transition: transform 0.5s ease,visibility 0.2s,-webkit-transform 0.5s ease;
+}
+
+.account form div {
+  margin: .75em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.account form div label {
+  width: 30%;
+  text-align: center;
+}
+
+.account form div input:not(input[type=checkbox]) {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 70%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  background-color: #eee;
+  padding: 1em;
+  border-radius: 1em;
+  text-align: center;
+}
+
+.account form div input:not(input[type=checkbox])[type=tel] {
+  direction: ltr;
+}
+
+.account form div input:not(input[type=checkbox]):focus {
+  border: 1px solid #0055FF;
+}
+
+.account form div input:not(input[type=checkbox])::-webkit-input-placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+
+.account form div input:not(input[type=checkbox]):-ms-input-placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+
+.account form div input:not(input[type=checkbox])::-ms-input-placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+
+.account form div input:not(input[type=checkbox])::placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+
+.account form div.remember-forget {
+  width: 70%;
+}
+
+.account form div.remember-forget div {
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.account form div.remember-forget div svg {
+  position: absolute;
+  pointer-events: none;
+}
+
+.account form div.remember-forget div svg#checked {
+  fill: #0055FF;
+  display: none;
+}
+
+.account form div.remember-forget div svg#unchecked path:nth-child(1) {
+  fill: #0055FF;
+}
+
+.account form div.remember-forget div svg#unchecked path:nth-child(2) {
+  stroke: #0055FF;
+}
+
+.account form div.remember-forget div input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  width: 2em;
+  height: 2em;
+  border-radius: 0.5em;
+  border: 2px solid #0055FF;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.account form div.remember-forget div input:checked ~ svg#unchecked {
+  display: none;
+}
+
+.account form div.remember-forget div input:checked ~ svg#checked {
+  display: block;
+}
+
+.account form div.remember-forget div label {
+  width: 70%;
+}
+
+.account form div.remember-forget a {
+  color: #0055FF;
+  text-align: center;
+}
+
+.account form button {
+  margin: .5em 0;
+  background-color: #0055FF;
+  color: #fff;
+  border: none;
+  outline: none;
+  width: 70%;
+  margin-right: auto;
+  padding: 1em;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.account form button:focus {
+  border: 1px solid #000;
+}
+
+.account form button:hover {
+  background-color: #0043CA;
+}
+
+.account form button#signUpButton {
+  background-color: #00CC88;
+}
+
+.account form button#signUpButton:hover {
+  background-color: #00B277;
+}
+/*# sourceMappingURL=account.css.map */
