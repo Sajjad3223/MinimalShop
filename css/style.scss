@@ -1,12 +1,13 @@
 @import 'root';
 
-*{
-    margin: 0;padding: 0;box-sizing: border-box;
-    font-family: 'Vazir FD';
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-    background-color: #E0F8FF;
+    background-color: $background-color;
     direction: rtl;
     overflow-x: hidden;
 

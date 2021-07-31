@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controls</title>
+    
+    <link rel="stylesheet" href="./css/controls.css">
+
+</head>
+<body>
+    <form action="" id="form1">
+        <div class="container buttons">
+            <a href="" class="btn    btn-primary    "  > primary </a>
+            <a href="" class="btn    btn-success    "  > success </a>
+            <a href="" class="btn    btn-danger     "  > danger </a>
+            <a href="" class="btn    btn-warning    "  > warning </a>
+            <a href="" class="btn    btn-secondary  "  > secondary </a>
+            <a href="" class="btn    disabled       "  > disabled </a>
+        </div>
+    
+        <div class="container choosers">
+    
+            <div >
+                <div>
+                    <label for="unchecked">Unchecked</label>
+                    <input type="checkbox" name="unchecked" id="unchecked" >
+                    
+                </div>
+                <div>
+                    <label for="checked">Checked</label>
+                    <input type="checkbox" name="checked" id="checked" checked>
+                </div>
+            </div>
+    
+            <div class="radio">
+                <div>
+                    <label for="unchecked-radio">Unchecked</label>
+                    <input type="radio" name="radio" id="unchecked-radio" >
+                </div>
+                <div>
+                    <label for="checked-radio">Checked</label>
+                    <input type="radio" name="radio" id="checked-radio" checked>
+                </div>
+            </div>
+            
+            <div class="toggle">
+                <div>
+                    <label for="toggle-off">Unchecked</label>
+                    <input type="checkbox" class="toggle" name="toggle-off" id="toggle-off">
+                </div>
+                <div>
+                    <label for="toggle">Checked</label>
+                    <input type="checkbox" class="toggle" name="toggle" id="toggle" checked>
+                </div>
+            </div>
+            
+        </div>
+    
+        <div class="container textbox">
+            <input type="text" class="bordered" placeholder="input placeholder">
+            <input type="search" class="float" placeholder="input placeholder">
+
+            <textarea class="float" cols="30" rows="10">
+            </textarea>
+            <textarea class="bordered" cols="30" rows="10">
+            </textarea>
+        </div>
+    
+        <div class="container dropdowns">
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button">
+                  Dropdown button
+                </button>
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 2L8 8L2 2" stroke="#0055FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="">Action</a></li>
+                  <li><a class="dropdown-item" href="">Another action</a></li>
+                  <li><a class="dropdown-item" href="">Something else here</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button">
+                  Dropdown button
+                </button>
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 2L8 8L2 2" stroke="#0055FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                
+                <ul class="dropdown-menu scroll-y rtl">
+                    <li><input type="search" class="bordered rtl" placeholder="جستجو"></li>
+                    <li><a class="dropdown-item" href="">Action</a></li>
+                    <li><a class="dropdown-item" href="">Another action</a></li>
+                    <li><a class="dropdown-item" href="">Something else here</a></li>
+                    <li><a class="dropdown-item" href="">Something else here</a></li>
+                    <li><a class="dropdown-item" href="">Something else here</a></li>
+                    <li><a class="dropdown-item" href="">Something else here</a></li>
+                    <li><a class="dropdown-item" href="">Something else here</a></li>
+                    <li><a class="dropdown-item" href="">Something else here</a></li>
+                    <li><a class="dropdown-item" href="">Something else here</a></li>
+                    <li><a class="dropdown-item" href="">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="container file-input">
+            <div>
+                <input type="file" name="empty" id="empty" required>
+                <label for="empty"> فایلی انتخاب نشده است </label>
+            </div>
+            <div>
+                <input type="file" name="empty" id="empty" >
+                <label for="empty"> image1.png </label>
+            </div>
+        </div>
+
+        <div class="container range-input">
+            <div class="priceRangeSlider">
+                <input type="range" id="input-left" min="0" max="100" value="10">
+                <input type="range" id="input-right" min="0" max="100" value="90">
+
+                <div class="slider">
+                    <div class="track"></div>
+                    <div class="range" ></div>
+                    <div class="thumb left">
+                        <input type="number" class="min">
+                    </div>
+                    <div class="thumb right">
+                        <input type="number" class="max">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container multiple-selector">
+            <div class="multiple-select rtl">
+                <span>لیست آیتم ها</span>
+                <div>
+                    <div>
+                        <input type="checkbox" name="ch1" id="ch1">
+                        <label for="ch1"> آیتم شماره یک</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="ch2" id="ch2">
+                        <label for="ch2"> آیتم شماره یک</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="ch3" id="ch3">
+                        <label for="ch3"> آیتم شماره یک دو سه چهار</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="ch4" id="ch4">
+                        <label for="ch4"> آیتم شماره یک</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="ch5" id="ch5">
+                        <label for="ch5"> آیتم شماره یک</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="ch3" id="ch3">
+                        <label for="ch3"> آیتم شماره یک دو سه چهار</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="ch4" id="ch4">
+                        <label for="ch4"> آیتم شماره یک</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="ch5" id="ch5">
+                        <label for="ch5"> آیتم شماره یک</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/slider.js"></script>
+    <script>
+        $('.dropdown-menu').slideUp(0);
+        $(function () {
+            $('.dropdown-toggle').click(function(){
+                $(this).toggleClass('expanded');
+                $(this).parent().find('.dropdown-menu').slideToggle(200);
+            });
+
+            $('.dropdown-item').click(function(event){
+                event.preventDefault();
+                $(this).parent().parent().parent().find('.dropdown-toggle').text($(this).text()).toggleClass('expanded');
+                $(this).parent().parent().slideToggle(200);
+                
+            });
+
+            $('.dropdown-menu input[type=search]').on('input propertychange',(event)=>{
+                var filterText = event.currentTarget.value.toUpperCase();
+                var dropdownMenu = event.currentTarget.parentElement.parentElement;
+                var items = dropdownMenu.getElementsByTagName('a');
+                
+                console.log(items)
+
+                for(let item of items){
+                    if(item.innerText.toUpperCase().includes(filterText))
+                    {
+                        item.style.display = "";
+                    }
+                    else {
+                        item.style.display = "none";
+                    }
+                }
+
+            })
+
+
+
+            // $('button[type=submit]').click(event => {
+            //     var input = $("<input>")
+            //     .attr("type", "hidden")
+            //     .attr("name", "mydata").val($(".dropdown-toggle").text());
+            //     $('#form1').append(input);
+            // });
+        })
+    </script>
+    
+    
+</body>
+</html>

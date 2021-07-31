@@ -1,0 +1,607 @@
+@import 'root';
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'vazir fd';
+}
+
+body{
+    background-color: $background-color;
+    margin: 0 5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    position: relative;
+    margin: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+    border: 2px black solid;
+    border-radius: 1em;
+    &::before{
+        content: '.';
+        position: absolute;
+        top: -0.8em;
+        left: 4em;
+        background-color: $background-color;
+        padding: 0 1em;
+    }
+
+}
+.buttons{
+    &::before
+    {
+        content: 'دکمه ها';
+    }
+}
+.choosers{
+    justify-content: space-around;
+
+    & > div{
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        div{
+            display: flex;
+            align-items: center;
+            margin: 1em;
+        }
+    }
+
+    &::before
+    {
+        content: 'انتخاب گرها';
+    }
+}
+.textbox{
+    display: flex;
+    flex-direction: column;
+    input{
+        width: 100%;
+    }
+    &::before
+    {
+        content: 'ورودی های متن';
+    }
+}
+.dropdowns{
+    & > div{
+        margin: 0 2em;
+    }
+    &::before
+    {
+        content: 'دراپ داون ها';
+    }
+}
+.file-input{
+    & > div{
+        margin: 0 2em;
+    }
+    &::before
+    {
+        content: 'انتخاب کننده فایل';
+    }
+}
+.range-input{
+    &::before
+    {
+        content: 'اسلایدر';
+    }
+}
+.multiple-selector{
+    &::before
+    {
+        content: 'انتخاب گر چند تایی';
+    }
+}
+
+
+
+
+.btn{
+    padding: 1em 3em;
+    margin: 0.8em;
+    outline: none;
+    border: none;
+    border-radius: 1em;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    
+
+    &.btn-success{
+        background-color: $success-color;
+        &:hover{
+            background-color: $success-hover-color;
+        }
+    }
+    &.btn-primary{
+        background-color: $primary-color;
+        &:hover{
+            background-color: $primary-hover-color;
+        }
+    }
+    &.btn-danger{
+        background-color: $danger-color;
+        &:hover{
+            background-color: $danger-hover-color;
+        }
+    }
+    &.btn-warning{
+        background-color: $warning-color;
+        &:hover{
+            background-color: $warning-hover-color;
+        }
+    }
+    &.btn-secondary{
+        background-color: $secondary-color;
+        &:hover{
+            background-color: $secondary-hover-color;
+        }
+    }
+    &.disabled{
+        background-color: $secondary-color;
+        opacity: 0.7;
+        pointer-events: none;
+    }
+
+}
+
+.px-5{
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+.br-05{
+    border-radius: 0.5em;
+}
+
+.br-1{
+    border-radius: 1em;
+}
+
+input[type=checkbox]{
+    position: relative;
+    appearance: none;
+    outline: none;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    margin: 0 1em;
+    &::before,&::after{
+        content: "";
+        display: block;
+        background-size: cover;
+        height: 2em;
+        width: 2em;
+        position: absolute;
+        pointer-events: none;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity 0.5s;
+    }
+
+    &::before{
+        background-image: url('../imgs/Unckecked.svg');
+    }
+    &::after{
+        background-image: url('../imgs/Checked.svg');
+        opacity: 0;
+    }
+    
+    &:checked {
+        &::before{
+            opacity: 0;
+        }
+        &::after{
+            opacity: 1;
+        }
+    }
+}
+
+input[type=radio]{
+    position: relative;
+    appearance: none;
+    outline: none;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    margin: 0 1em;
+    &::before{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: ' ';
+        border-radius: 50%;
+        border: 3px solid $primary-color;
+        background-color: transparent;
+    }
+    &::after{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        height: 60%;
+        content: ' ';
+        border-radius: 50%;
+        background-color: $primary-color;
+        transform: translate(-50% , -50%);
+        opacity: 0;
+        transition: opacity 0.4s;
+    }
+
+    &:checked{
+        &::after{
+            opacity: 1;
+        }
+    }
+}
+
+input.toggle{
+    position: relative;
+    width: 100px;
+    height: 50px;
+    appearance: none;
+    background-color: white;
+    border: 3px solid $primary-color;
+    border-radius: 3em;
+    cursor: pointer;
+    margin: 0 1em;
+    transition: background-color 0.3s ease;
+    &::before{
+        content: "";
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        background-color: $primary-color;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+
+    &:checked{
+        background-color: $primary-color;
+        &::before{
+            transform: translate(45px,-50%);
+            background-color: white;
+        }
+    }
+}
+
+.scroll-y{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.rtl{
+    direction: rtl;
+}
+
+.ltr{
+    direction: ltr;
+}
+
+textarea,input:not(input[type=radio],input[type=checkbox],input[type=button],input[type=submit]){
+    padding: 1em 1.5em;
+    margin: 1em;
+    &:placeholder-shown{
+        font-weight: bolder;
+    }
+    &::-webkit-search-cancel-button{
+        appearance: none;
+    }
+}
+
+input.bordered{
+    appearance: none;
+    outline: none;
+    border: 3px solid $primary-color;
+    border-radius: 1em;
+}
+
+input.float{
+    appearance: none;
+    outline: none;
+    border: none;
+    border-radius: 1em;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+    &:focus{
+        box-shadow: none;
+        border: 3px solid $primary-color;
+    }
+}
+
+textarea{
+    resize: none;
+    appearance: none;
+    outline: none;
+    border-radius: 1em;
+}
+
+textarea.bordered{
+    border: 3px solid $primary-color;
+    &:focus{
+        box-shadow: none;
+        border: 3px solid $primary-color;
+    }
+}
+
+textarea.float{
+    border: none;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+    &:focus{
+        box-shadow: none;
+        border: 3px solid $primary-color;
+    }
+}
+
+
+input[type=file]{
+    display: none;
+    & + label{
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+        padding: 1em;
+        border-radius: 1em;
+        background-color: #fff;
+        position: relative;
+        padding-right: 10em;
+        cursor: pointer;
+        &:hover{
+            &::after{
+                background-color: $primary-hover-color;
+            }
+        }
+        &::after{
+            position: absolute;
+            content: "انتخاب فایل";
+            color: #fff;
+            border-radius: 0 1em 1em 0;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            padding: 0 1em;
+            right: 0;
+            top: 0;
+            width: auto;
+            height: 100%;
+            justify-content: center;
+            background-color: $primary-color;
+        }
+    }
+    &:valid{
+        & + label{
+            border: 2px solid $primary-color;
+            box-shadow: none;
+        }
+    }
+}
+
+.priceRangeSlider{
+    margin: 5em;
+    position: relative;
+    direction: ltr;
+    width: 20em;
+
+    input[type=range]{
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        height: 5px;
+        width: 100%;
+        appearance: none;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    input[type=range]::-webkit-slider-thumb{
+        pointer-events: all;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: none;
+        background-color: $primary-color;
+        appearance: none;
+        
+    }
+
+    .slider{
+        position: relative;
+        z-index: 1;
+        height: 5px;
+
+        .track{
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            border-radius: 5px;
+            background-color: #c6aee7;
+        }
+
+        .range{
+            position: absolute;
+            z-index: 2;
+            left: 25%;
+            right: 25%;
+            top: 0;
+            bottom: 0;
+            border-radius: 5px;
+            background-color: $primary-color;
+        }
+
+        .thumb{
+            position: absolute;
+            z-index:10;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 2px solid $primary-color;
+            &:hover{
+                border-color: $primary-hover-color;
+            }
+            input{
+                margin: 0;
+                padding: 0 1em;
+                position: absolute;
+                width: 5em;
+                height: 3em;
+                outline: none;
+                border: none;
+                border-radius: 0.5em;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%,-120%);
+                box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+            }
+        }
+        .left{
+            transform: translate(-15px,-10px);
+            left: 25%;
+        }
+        .right{
+            transform: translate(15px,-10px);
+            right: 25%;
+        }
+    }
+
+
+}
+
+.dropdown{
+    position: relative;
+    .dropdown-toggle{
+        display: flex;
+        min-width: 15em;
+        position: relative;
+        color: #000;
+        background-color: white;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+        font-weight: bolder;
+        padding: 1em 2em;
+        padding-left: 4em;
+        transition: border-radius 0.5s ease;
+        margin: 0;
+        & ~ svg{
+            position: absolute;
+            left: 1em;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.5s ease;
+        }
+    }
+    .expanded{
+        border-radius: 1em 1em 0 0;
+        & ~ svg{
+            transform: translateY(-50%) rotate(180deg);
+        }
+        & ~ .dropdown-menu{
+            display: flex;
+        }
+    }
+
+    ul.dropdown-menu{
+        position: absolute;
+        width: 100%;
+        max-height: 17em;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        text-align: right;
+        background-color: #F4F4F4;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+        padding: 1em;
+        border-radius: 0 0 1em 1em;
+        z-index: 5;
+        li{
+            margin: 0.25em 0;
+        }
+
+        li a{
+            text-decoration: none;
+            color: black;
+        }
+        li input{
+            margin: 0;
+            width: 100%;
+            border-radius: 0.5em;
+        }
+    }
+}
+
+.multiple-select{
+    margin: 1em;
+    border: 3px solid $primary-color;
+    padding: 1em;
+    padding-right: 0;
+    border-radius: 1em;
+    position: relative;
+    span{
+        position: absolute;
+        top: 0;
+        right: 1.5em;
+        background-color: $background-color;
+        padding: 0 1em;
+        transform: translateY(-50%);
+        pointer-events: none;
+        font-size: 14px;
+    }
+    & > div{
+        padding: 1em;
+        height: 15em;
+        overflow-y: auto;
+        overflow-x: hidden;
+        
+        /* width */
+        &::-webkit-scrollbar {
+            margin: 1em;
+            width: 10px;
+        }
+        
+        /* Track */
+        &::-webkit-scrollbar-track {
+            margin: 1em;
+            background: #C4C4C4; 
+            border-radius: 0.5em;
+        }
+        
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #F4F4F4; 
+            border-radius: 0.5em;
+            border: 3px #C4C4C4 solid;
+        }
+        
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+
+        & > div{
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+            &:last-child{
+                margin: 0;
+            }
+        }
+    }
+}
