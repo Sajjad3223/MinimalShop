@@ -167,7 +167,7 @@ body{
     border-radius: 1em;
 }
 
-input[type=checkbox]{
+input[type=checkbox]:not(input.toggle){
     position: relative;
     appearance: none;
     outline: none;
