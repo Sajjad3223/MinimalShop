@@ -22,6 +22,7 @@
         background-color: #00CC88;
         color: white;
         z-index: 10;
+        transition: background-color 0.3s;
         &:hover{
             background-color: #00BA7C;
         }
@@ -100,34 +101,42 @@
                 div{
                     position: relative;
                     align-items: center;
-                    svg{
-                        position: absolute;
-                        pointer-events: none;
-                        &#checked{fill: $primary-color; display: none;}
-                        &#unchecked{
-                            path{
-                                &:nth-child(1){fill: $primary-color;}
-                                &:nth-child(2){stroke: $primary-color;}
-                            }
-
-                        }
-                    }
                     input{
+                        position: relative;
                         appearance: none;
                         outline: none;
                         width: 2em;
                         height: 2em;
-                        border-radius: 0.5em;
-                        border: 2px solid $primary-color;
-                        opacity: 0;
                         cursor: pointer;
+                        margin: 0 1em;
+                        &::before,&::after{
+                            content: "";
+                            display: block;
+                            background-size: cover;
+                            height: 2em;
+                            width: 2em;
+                            position: absolute;
+                            pointer-events: none;
+                            right: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            transition: opacity 0.5s;
+                        }
 
+                        &::before{
+                            background-image: url('../imgs/Unckecked.svg');
+                        }
+                        &::after{
+                            background-image: url('../imgs/Checked.svg');
+                            opacity: 0;
+                        }
+                        
                         &:checked {
-                            & ~ svg#unchecked{
-                                display: none;
+                            &::before{
+                                opacity: 0;
                             }
-                            & ~ svg#checked{
-                                display: block;
+                            &::after{
+                                opacity: 1;
                             }
                         }
                     }
@@ -136,6 +145,10 @@
                 a{
                     color: $primary-color;
                     text-align: center;
+                    text-decoration: none;
+                    &:hover{
+                        color: $primary-hover-color;
+                    }
                 }
             }
 
@@ -151,19 +164,20 @@
             padding: 1em;
             border-radius: 1em;
             cursor: pointer;
+            transition: background-color 0.3s;
             
             &:focus{
                 border: 1px solid #000;
             }
 
             &:hover{
-                background-color: #0043CA;
+                background-color: $primary-hover-color;
             }
 
             &#signUpButton{
-                background-color: #00CC88;
+                background-color: $success-color;
                 &:hover{
-                    background-color: #00B277;
+                    background-color: $success-hover-color;
                 }
             }
         }

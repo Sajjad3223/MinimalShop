@@ -26,6 +26,8 @@
   background-color: #00CC88;
   color: white;
   z-index: 10;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .account .changeForm:hover {
@@ -153,43 +155,49 @@
           align-items: center;
 }
 
-.account form div.remember-forget div svg {
-  position: absolute;
-  pointer-events: none;
-}
-
-.account form div.remember-forget div svg#checked {
-  fill: #0055FF;
-  display: none;
-}
-
-.account form div.remember-forget div svg#unchecked path:nth-child(1) {
-  fill: #0055FF;
-}
-
-.account form div.remember-forget div svg#unchecked path:nth-child(2) {
-  stroke: #0055FF;
-}
-
 .account form div.remember-forget div input {
+  position: relative;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   outline: none;
   width: 2em;
   height: 2em;
-  border-radius: 0.5em;
-  border: 2px solid #0055FF;
-  opacity: 0;
   cursor: pointer;
+  margin: 0 1em;
 }
 
-.account form div.remember-forget div input:checked ~ svg#unchecked {
-  display: none;
-}
-
-.account form div.remember-forget div input:checked ~ svg#checked {
+.account form div.remember-forget div input::before, .account form div.remember-forget div input::after {
+  content: "";
   display: block;
+  background-size: cover;
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  pointer-events: none;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.account form div.remember-forget div input::before {
+  background-image: url("../imgs/Unckecked.svg");
+}
+
+.account form div.remember-forget div input::after {
+  background-image: url("../imgs/Checked.svg");
+  opacity: 0;
+}
+
+.account form div.remember-forget div input:checked::before {
+  opacity: 0;
+}
+
+.account form div.remember-forget div input:checked::after {
+  opacity: 1;
 }
 
 .account form div.remember-forget div label {
@@ -199,6 +207,11 @@
 .account form div.remember-forget a {
   color: #0055FF;
   text-align: center;
+  text-decoration: none;
+}
+
+.account form div.remember-forget a:hover {
+  color: #0047D6;
 }
 
 .account form button {
@@ -212,6 +225,8 @@
   padding: 1em;
   border-radius: 1em;
   cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .account form button:focus {
@@ -219,14 +234,14 @@
 }
 
 .account form button:hover {
-  background-color: #0043CA;
+  background-color: #0047D6;
 }
 
 .account form button#signUpButton {
-  background-color: #00CC88;
+  background-color: #00B277;
 }
 
 .account form button#signUpButton:hover {
-  background-color: #00B277;
+  background-color: #009563;
 }
 /*# sourceMappingURL=account.css.map */
