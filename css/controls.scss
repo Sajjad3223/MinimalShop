@@ -483,6 +483,33 @@ input[type=file]{
 
 }
 
+@mixin scrollbar {
+    /* width */
+    &::-webkit-scrollbar {
+        margin: 1em;
+        width: 10px;
+    }
+    
+    /* Track */
+    &::-webkit-scrollbar-track {
+        margin: 1em;
+        background: #C4C4C4; 
+        border-radius: 0.5em;
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #F4F4F4; 
+        border-radius: 0.5em;
+        border: 3px #C4C4C4 solid;
+    }
+    
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+}
+
 .dropdown{
     position: relative;
     .dropdown-toggle{
@@ -531,6 +558,7 @@ input[type=file]{
         padding: 1em;
         border-radius: 0 0 1em 1em;
         z-index: 5;
+        @include scrollbar;
         li{
             margin: 0.25em 0;
         }
@@ -570,30 +598,7 @@ input[type=file]{
         overflow-y: auto;
         overflow-x: hidden;
         
-        /* width */
-        &::-webkit-scrollbar {
-            margin: 1em;
-            width: 10px;
-        }
-        
-        /* Track */
-        &::-webkit-scrollbar-track {
-            margin: 1em;
-            background: #C4C4C4; 
-            border-radius: 0.5em;
-        }
-        
-        /* Handle */
-        &::-webkit-scrollbar-thumb {
-            background: #F4F4F4; 
-            border-radius: 0.5em;
-            border: 3px #C4C4C4 solid;
-        }
-        
-        /* Handle on hover */
-        &::-webkit-scrollbar-thumb:hover {
-            background: #555; 
-        }
+        @include scrollbar;
 
         & > div{
             display: flex;

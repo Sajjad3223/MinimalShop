@@ -59,19 +59,17 @@
         </div>
     
         <div class="container textbox">
-            <input type="text" class="bordered" placeholder="input placeholder">
-            <input type="search" class="float" placeholder="input placeholder">
+            <input type="text" class="bordered" placeholder="bordered text input">
+            <input type="search" class="float" placeholder="float text input">
 
-            <textarea class="float" cols="30" rows="10">
-            </textarea>
-            <textarea class="bordered" cols="30" rows="10">
-            </textarea>
+            <textarea class="float" cols="30" rows="10"> float text area </textarea>
+            <textarea class="bordered" cols="30" rows="10"> bordered text area</textarea>
         </div>
     
         <div class="container dropdowns">
             <div class="dropdown">
                 <button class="btn dropdown-toggle" type="button">
-                  Dropdown button
+                  Dropdown 
                 </button>
                 <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14 2L8 8L2 2" stroke="#0055FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -85,7 +83,7 @@
             </div>
             <div class="dropdown">
                 <button class="btn dropdown-toggle" type="button">
-                  Dropdown button
+                  Dropdown  with search
                 </button>
                 <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14 2L8 8L2 2" stroke="#0055FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -224,7 +222,13 @@
             // });
         })
     </script>
-    
+    <script>
+        $(function(){
+            $('#empty').on('input',function(event){
+                $(this).parent().find('label').text($(this).val());
+            });
+        })
+    </script>
     
 </body>
 </html>

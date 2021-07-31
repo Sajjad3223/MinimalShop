@@ -31,8 +31,6 @@ function SetRightValue(_event,percent = -1){
     min = _this.attr('min'),
     max = _this.attr('max');
 
-    console.log(percent)
-
     if(percent != -1)
         _this.val(percent);
 

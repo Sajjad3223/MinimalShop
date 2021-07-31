@@ -632,6 +632,31 @@ input[type=file]:valid + label {
   padding: 1em;
   border-radius: 0 0 1em 1em;
   z-index: 5;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.dropdown ul.dropdown-menu::-webkit-scrollbar {
+  margin: 1em;
+  width: 10px;
+}
+
+.dropdown ul.dropdown-menu::-webkit-scrollbar-track {
+  margin: 1em;
+  background: #C4C4C4;
+  border-radius: 0.5em;
+}
+
+.dropdown ul.dropdown-menu::-webkit-scrollbar-thumb {
+  background: #F4F4F4;
+  border-radius: 0.5em;
+  border: 3px #C4C4C4 solid;
+}
+
+.dropdown ul.dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .dropdown ul.dropdown-menu li {
