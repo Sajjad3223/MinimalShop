@@ -163,12 +163,12 @@ body > section > div:nth-of-type(1) a {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1em 2em;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 1em;
   border: 1px solid #fff;
   margin-right: 2em;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   opacity: 0;
@@ -201,6 +201,7 @@ body > section > div:nth-of-type(1) a {
 }
 
 .dropdown ul.dropDownMenu > li.item ul {
+  background-color: #eeeeee;
   padding: 1em 2em;
   margin-top: -2em;
   margin-right: 3.5em;
