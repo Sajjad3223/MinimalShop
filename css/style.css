@@ -47,6 +47,7 @@ body > section > div:nth-of-type(1) a {
 }
 
 .navbar {
+  width: 100% !important;
   background-color: #F3F3F3;
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -150,9 +151,13 @@ body > section > div:nth-of-type(1) a {
   position: relative;
 }
 
+.dropdown a:hover ~ ul.dropDownMenu {
+  -webkit-animation: showDropDown 0.5s forwards;
+          animation: showDropDown 0.5s forwards;
+}
+
 .dropdown ul.dropDownMenu {
   position: absolute;
-  display: none !important;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -166,10 +171,28 @@ body > section > div:nth-of-type(1) a {
           backdrop-filter: blur(20px);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  visibility: hidden;
+  z-index: 900;
+}
+
+.dropdown ul.dropDownMenu:hover {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 .dropdown ul.dropDownMenu > li.item {
-  margin: .5em;
+  margin: 0.5em;
+  width: 100%;
+}
+
+.dropdown ul.dropDownMenu > li.item a {
   width: 100%;
 }
 
@@ -178,17 +201,41 @@ body > section > div:nth-of-type(1) a {
 }
 
 .dropdown ul.dropDownMenu > li.item ul {
-  padding: 1em 3em;
+  padding: 1em 2em;
   margin-top: -2em;
-  margin-right: 7em;
+  margin-right: 3.5em;
+  z-index: 999;
 }
 
-.dropdown ul.dropDownMenu.expand {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
+.dropdown ul.dropDownMenu > li.item ul:hover {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+@-webkit-keyframes showDropDown {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes showDropDown {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
 }
 
 .searchBox {
@@ -230,16 +277,29 @@ body > section > div:nth-of-type(1) a {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .searchBox label {
   font-size: 14px;
   right: 1em;
+  margin-right: 1em;
   opacity: 0.7;
+  pointer-events: none;
 }
 
 .searchBox button {
+  padding: 1em 0;
   left: 1em;
+  margin-left: 1em;
+}
+
+.searchBox button:hover {
+  -webkit-transform: translateY(-50%) scale(1.2);
+          transform: translateY(-50%) scale(1.2);
 }
 
 .w-50 {
@@ -271,11 +331,14 @@ hr {
 .cards-container {
   margin: 1em 0;
   width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .cards-container .card {
   background-color: #fff;
   width: 30% !important;
+  max-width: 300px;
   height: 370px;
   border-radius: 1em;
   display: -webkit-box;
@@ -287,7 +350,7 @@ hr {
           flex-direction: column;
   -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-  margin: 0 0.5em;
+  margin: 0.5em;
 }
 
 .cards-container .card .cardImage {

@@ -1,0 +1,49 @@
+div.main {
+  margin: 2em;
+  width: 98%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.main aside {
+  width: 25%;
+  padding-left: 1em;
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+div.main aside form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+div.main aside form > div {
+  margin: 1em 0;
+}
+
+div.main aside form > div h4 {
+  margin-bottom: 1em;
+}
+
+div.main aside form > div:nth-child(2) > div {
+  margin: 4em 0;
+  margin-bottom: 0;
+}
+
+div.main main {
+  width: 75%;
+  margin: 0 1em;
+}
+
+div.main main .dropdown {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+/*# sourceMappingURL=search.css.map */

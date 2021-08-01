@@ -6,12 +6,35 @@
     box-sizing: border-box;
     font-family: 'vazir fd';
 }
+@mixin scrollbar {
+    /* width */
+    &::-webkit-scrollbar {
+        margin: 1em;
+        width: 10px;
+    }
+    
+    /* Track */
+    &::-webkit-scrollbar-track {
+        margin: 1em;
+        background: #C4C4C4; 
+        border-radius: 0.5em;
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #F4F4F4; 
+        border-radius: 0.5em;
+        border: 3px #C4C4C4 solid;
+    }
+    
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+}
 
 body{
-    background-color: $background-color;
-    margin: 0 5em;
-    display: flex;
-    flex-direction: column;
+    @include scrollbar();
 }
 
 .container{
@@ -103,7 +126,24 @@ body{
 
 
 
-
+.link{
+    text-align: center;
+    text-decoration: none;
+    color: $primary-color;
+    cursor: pointer;
+}
+.color-danger{
+    color: $danger-color;
+}
+.color-warning{
+    color: $warning-color;
+}
+.color-primary{
+    color: $primary-color;
+}
+.color-secondary{
+    color: $secondary-color;
+}
 .btn{
     padding: 1em 3em;
     margin: 0.8em;
@@ -114,6 +154,8 @@ body{
     text-decoration: none;
     transition: background-color 0.3s ease;
     cursor: pointer;
+    text-align: center;
+    font-size: 16px;
     
 
     &.btn-success{
@@ -483,37 +525,12 @@ input[type=file]{
 
 }
 
-@mixin scrollbar {
-    /* width */
-    &::-webkit-scrollbar {
-        margin: 1em;
-        width: 10px;
-    }
-    
-    /* Track */
-    &::-webkit-scrollbar-track {
-        margin: 1em;
-        background: #C4C4C4; 
-        border-radius: 0.5em;
-    }
-    
-    /* Handle */
-    &::-webkit-scrollbar-thumb {
-        background: #F4F4F4; 
-        border-radius: 0.5em;
-        border: 3px #C4C4C4 solid;
-    }
-    
-    /* Handle on hover */
-    &::-webkit-scrollbar-thumb:hover {
-        background: #555; 
-    }
-}
 
 .dropdown{
     position: relative;
     .dropdown-toggle{
         display: flex;
+        width: 100%;
         min-width: 15em;
         position: relative;
         color: #000;

@@ -40,6 +40,7 @@ body{
 }
 
 .navbar{
+    width: 100% !important;
     background-color: #F3F3F3;
     box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
     height: 80px;
@@ -106,9 +107,15 @@ body{
 
 .dropdown{
     position: relative;
+    a{
+        &:hover{
+            & ~ ul.dropDownMenu{
+                animation: showDropDown 0.5s forwards;
+            }
+        }
+    }
     ul.dropDownMenu{
         position: absolute;
-        display: none !important;
         flex-direction: column;
         padding: 1em 2em;
         background-color: rgba(255, 255, 255, 0.3);
@@ -117,29 +124,54 @@ body{
         margin-right: 2em;
         backdrop-filter: blur(20px);
         box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        opacity: 0;
+        transform: translateY(10%);
+        transition: all 0.3s;
+        visibility: hidden;
+        z-index: 900;
+
+        &:hover{
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0%);
+        }
         
 
         & > li.item{
-            margin: .5em;
+            margin: 0.5em;
             width: 100%;
             a{
+                width: 100%;
                 &:hover{
                     color: rgba(50, 10, 250, 1);
                 }
             }
             ul{
-                padding: 1em 3em;
+                padding: 1em 2em;
                 margin-top: -2em;
-                margin-right: 7em;
-            }
-        }
+                margin-right: 3.5em;
+                z-index: 999;
 
-        &.expand{
-            display: flex !important;
-            animation-name: fadeIn;
+                &:hover{
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translateY(0%);
+                }
+            }
         }
     }
 }
+@keyframes showDropDown {
+    0%{
+        visibility: visible;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
 
 .searchBox{
     position: relative;
@@ -148,7 +180,7 @@ body{
         background-color: #E0E0E0;
         border: none;
         outline: none;
-        padding: 1em;
+        padding: 1em ;
         border-radius: 1em;
 
         &::-webkit-search-decoration,
@@ -174,14 +206,22 @@ body{
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+        transition: transform 0.3s ;
     }
     label{
         font-size: 14px;
         right: 1em;
+        margin-right: 1em;
         opacity: 0.7;
+        pointer-events: none;
     }
     button{
+        padding: 1em 0;
         left: 1em;
+        margin-left: 1em;
+        &:hover{
+            transform: translateY(-50%) scale(1.2);
+        }
     }
 }
 
@@ -208,15 +248,17 @@ hr{
 .cards-container{
     margin: 1em 0;
     width: 100%;
+    flex-wrap: wrap;
     .card{
         background-color: #fff;
         width: 30% !important;
+        max-width: 300px;
         height: 370px;
         border-radius: 1em;
         display: flex;
         flex-direction: column;
         box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
-        margin: 0 0.5em;
+        margin: 0.5em;
 
         .cardImage{
             width: 100%;
