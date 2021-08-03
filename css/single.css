@@ -1045,11 +1045,10 @@ section.mainDetails > div.navs div.indicator {
 
 section.mainDetails > div:not(div:first-child) {
   margin: 1em;
-  display: none;
 }
 
-section.mainDetails > div.active {
-  display: block !important;
+section.mainDetails > div:not(div:first-child):not(.review) {
+  display: none;
 }
 
 section.mainDetails .fullDetails {

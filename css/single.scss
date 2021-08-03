@@ -173,11 +173,8 @@ section.mainDetails{
     
     & > div:not(div:first-child){
         margin: 1em;
-        display: none;
-    }
-
-    & > div.active{
-        display: block !important;
+        &:not(.review)
+        {display: none;}
     }
     
 
