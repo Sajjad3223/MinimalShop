@@ -47,14 +47,26 @@ body > section > div:nth-of-type(1) a {
 }
 
 .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100% !important;
   background-color: #F3F3F3;
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   height: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navbar nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 1200px;
   margin: 0 auto;
 }
@@ -69,6 +81,12 @@ body > section > div:nth-of-type(1) a {
 
 .navbar nav ul {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navbar nav ul li {
@@ -76,9 +94,28 @@ body > section > div:nth-of-type(1) a {
 }
 
 .navbar nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 14px;
   text-decoration: none;
   color: black;
+}
+
+.navbar nav ul li a > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navbar nav ul li a svg {
@@ -104,47 +141,8 @@ body > section > div:nth-of-type(1) a {
           transition-delay: 0.1s;
 }
 
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.row-reverse {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.float-left {
-  margin-right: auto !important;
+.navbar nav ul:last-child {
+  margin-right: auto;
 }
 
 .dropdown {
@@ -303,43 +301,27 @@ body > section > div:nth-of-type(1) a {
           transform: translateY(-50%) scale(1.2);
 }
 
-.w-50 {
-  width: 50% !important;
-}
-
-.w-60 {
-  width: 60% !important;
-}
-
 hr {
   width: 95%;
   margin: 0 auto;
   opacity: 0.7;
 }
 
-.align-items-start {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.align-items-end {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
 .cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 1em 0;
   width: 100%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .cards-container .card {
   background-color: #fff;
-  width: 30% !important;
+  width: 30%;
   max-width: 300px;
+  min-width: 280px;
   height: 370px;
   border-radius: 1em;
   display: -webkit-box;
@@ -388,12 +370,45 @@ hr {
 }
 
 .cards-container .card .content > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   width: 95%;
   margin: 1em auto;
 }
 
+.cards-container .card .content .price-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .cards-container .card .content .price-container svg {
   margin-left: 0.5em;
+}
+
+.cards-container .card .content .price-container .price {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cards-container .card .content .price-container .real-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cards-container .card .content .price-container .real-price s {
@@ -414,11 +429,30 @@ hr {
   font-size: 0.8em;
 }
 
+.cards-container .card .content .price-container strong {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 .cards-container .card .content .stars {
   margin-top: 0.5em;
 }
 
 .cards-container .card .content .bookmark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #000;
   text-decoration: none;
   margin-right: auto;
@@ -438,30 +472,5 @@ hr {
 .cards-container .card .content .bookmark:hover > svg {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
-}
-
-.btn-nobg-primary {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #0055FF;
-  text-decoration: none;
-}
-
-.btn-nobg-primary:hover svg {
-  -webkit-transform: translateX(-5px);
-          transform: translateX(-5px);
-}
-
-.btn-nobg-primary svg {
-  stroke: #0055FF;
-  margin: 0 0.5em;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 /*# sourceMappingURL=style.css.map */

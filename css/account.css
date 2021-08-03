@@ -74,6 +74,16 @@
 }
 
 .account form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   width: 90%;
   top: 50%;
@@ -145,10 +155,15 @@
 }
 
 .account form div.remember-forget {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: auto;
   width: 70%;
 }
 
 .account form div.remember-forget div {
+  width: 50%;
   position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -205,6 +220,7 @@
 }
 
 .account form div.remember-forget a {
+  width: 50%;
   color: #0055FF;
   text-align: center;
   text-decoration: none;

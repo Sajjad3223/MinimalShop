@@ -58,6 +58,9 @@
     }
 
     form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         position: absolute;
         width: 90%;
         top: 50%;
@@ -97,8 +100,11 @@
                 }
             }
             &.remember-forget{
+                display: flex;
+                margin-right: auto;
                 width: 70%;
                 div{
+                    width: 50%;
                     position: relative;
                     align-items: center;
                     input{
@@ -143,6 +149,7 @@
                     label { width: 70%;}
                 }
                 a{
+                    width: 50%;
                     color: $primary-color;
                     text-align: center;
                     text-decoration: none;

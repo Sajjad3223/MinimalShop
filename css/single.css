@@ -813,4 +813,541 @@ input[type=file]:valid + label {
 .multiple-select > div > div:last-child {
   margin: 0;
 }
-/*# sourceMappingURL=controls.css.map */
+
+main, aside, .mainDetails {
+  margin: 2em 1em;
+  padding: 1em 2em;
+  margin-bottom: 0;
+  background-color: #fff;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 1em;
+}
+
+main .imgs > img {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 1em;
+}
+
+main .imgs > div {
+  position: relative;
+}
+
+main .imgs > div button {
+  width: 0.5em;
+  height: 1em;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  position: absolute;
+  top: 40%;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+main .imgs > div button svg {
+  width: 1em;
+  color: #000;
+}
+
+main .imgs > div button:disabled {
+  opacity: 0.5;
+}
+
+main .imgs > div button#btnNext {
+  right: 5px;
+}
+
+main .imgs > div button#btnNext:hover {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+main .imgs > div button#btnPrev {
+  left: 5px;
+}
+
+main .imgs > div button#btnPrev:hover {
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
+}
+
+main .imgs > div .imgs-thumbnail {
+  width: 95%;
+  overflow-x: hidden;
+}
+
+main .imgs > div .imgs-thumbnail ul {
+  list-style: none;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 0 2em;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+main .imgs > div .imgs-thumbnail ul li img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border-radius: 0.5em;
+}
+
+main .details {
+  position: relative;
+}
+
+main .details ul {
+  margin-right: 2em;
+  margin-top: 1em;
+}
+
+main .details ul h4 {
+  margin-right: -1em;
+}
+
+main .details > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  right: 0;
+  bottom: 5%;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+main .details > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1em;
+  border-left: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+main .details > div > div:last-child {
+  border: none;
+}
+
+main .details > div > div svg {
+  margin: 1em 0;
+  height: 30px;
+}
+
+aside {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1em;
+  height: 100%;
+  padding: 1em 2em;
+}
+
+aside > div {
+  padding: 0.5em 0;
+  margin: 0.5em 0;
+}
+
+aside > div button {
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 0 0.5em;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+aside > div button:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+aside > div a {
+  font-size: 14px;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-right: auto;
+}
+
+aside > div .color, aside > div .price {
+  margin-right: auto;
+}
+
+aside > div:nth-child(3), aside > div:nth-child(4) {
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+aside > div strong {
+  font-size: 20px;
+}
+
+section.mainDetails > div.navs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+section.mainDetails > div.navs a {
+  color: #000;
+  text-decoration: none;
+  opacity: 0.5;
+  width: 120px;
+  text-align: center;
+  font-weight: bolder;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+section.mainDetails > div.navs a.active {
+  opacity: 1;
+}
+
+section.mainDetails > div.navs div.indicator {
+  height: 2px;
+  width: 120px;
+  background-color: #0055FF;
+  border-radius: 0.5em;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+section.mainDetails > div:not(div:first-child) {
+  margin: 1em;
+  display: none;
+}
+
+section.mainDetails > div.active {
+  display: block !important;
+}
+
+section.mainDetails .fullDetails {
+  background-color: #EDEDED;
+  padding: 1em 2em;
+  border-radius: 1em;
+}
+
+section.mainDetails .fullDetails ul.category {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+section.mainDetails .fullDetails ul.category i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1em;
+}
+
+section.mainDetails .fullDetails ul.category li {
+  margin: 0.5em 1em;
+}
+
+section.mainDetails .comments h4 {
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #000;
+}
+
+section.mainDetails .comments form .message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.mainDetails .comments form .message div {
+  margin-top: 0.5em;
+  position: relative;
+}
+
+section.mainDetails .comments form .message div span {
+  pointer-events: none;
+  opacity: 0.5;
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+}
+
+section.mainDetails .comments form .message button {
+  margin-top: auto;
+}
+
+section.mainDetails .comments form .strength-weakness {
+  margin-top: 0.5em;
+}
+
+section.mainDetails .comments form .strength-weakness > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section.mainDetails .comments form .strength-weakness > div > div input {
+  width: 60%;
+  height: 50px;
+  margin: 0 1em;
+  border-radius: 8px;
+}
+
+section.mainDetails .comments form .strength-weakness > div > div > button {
+  padding: 0;
+  margin: 0;
+  width: 30%;
+  height: 50px;
+  font-size: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 0.5em;
+  border-radius: 8px;
+}
+
+section.mainDetails .comments form .strength-weakness > div > div > button svg {
+  margin-right: 0.5em;
+}
+
+section.mainDetails .comments form .strength-weakness > div > div div {
+  background-color: rgba(199, 179, 0, 0.5);
+  width: 100%;
+  margin: 1em 0;
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+
+section.mainDetails .comments form .strength-weakness > div > div div ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: auto;
+  height: 150px;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+section.mainDetails .comments form .strength-weakness > div > div div ul::-webkit-scrollbar {
+  width: 10px;
+}
+
+section.mainDetails .comments form .strength-weakness > div > div div ul::-webkit-scrollbar-track {
+  background: #C4C4C4;
+  border-radius: 0.5em;
+}
+
+section.mainDetails .comments form .strength-weakness > div > div div ul::-webkit-scrollbar-thumb {
+  background: #F4F4F4;
+  border-radius: 0.5em;
+  border: 3px #C4C4C4 solid;
+}
+
+section.mainDetails .comments form .strength-weakness > div > div div ul::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+section.mainDetails .comments form .strength-weakness > div > div div ul li {
+  padding: 0.2em 0.5em;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+}
+
+section.mainDetails .comments form .strength-weakness > div > div div ul li button {
+  margin-right: auto;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+section.mainDetails .comments form .strength-weakness > div.weakness > div div {
+  background-color: rgba(255, 69, 91, 0.5);
+}
+
+section.mainDetails .comments .comment {
+  padding-bottom: 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+section.mainDetails .comments .comment img.avatar {
+  aspect-ratio: 1 / 1;
+  width: 7vw;
+  border-radius: 50%;
+}
+
+section.mainDetails .comments .comment > div:last-child strong {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  padding-bottom: 0.5em;
+  display: block;
+  text-align: center;
+}
+
+section.mainDetails .comments .comment > div:last-child ul {
+  list-style: none;
+  width: 100%;
+  margin-top: 1em;
+}
+
+section.mainDetails .comments .comment > div:last-child ul li {
+  margin-bottom: 0.5em;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+section.mainDetails .comments .comment > div:last-child ul li svg {
+  margin-left: 0.5em;
+}
+
+section.mainDetails .comments .comment:last-child {
+  border: none;
+}
+
+.cards {
+  width: 95%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.cards .cards-container {
+  width: 300%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.cards button {
+  position: absolute;
+  top: 50%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.cards button#right {
+  right: 5px;
+}
+
+.cards button#right:hover {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+.cards button:disabled {
+  opacity: 0.5;
+}
+
+.cards button#left {
+  left: 5px;
+}
+
+.cards button#left:hover {
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
+}
+
+input.color-picker {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  margin: 0 0.5em;
+}
+
+input.color-picker::after {
+  content: "";
+  display: block;
+  background-size: cover;
+  height: 11px;
+  width: 15px;
+  position: absolute;
+  pointer-events: none;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  background-image: url(../imgs/Check.svg);
+  opacity: 0;
+}
+
+input.color-picker:checked::after {
+  opacity: 1;
+}
+/*# sourceMappingURL=single.css.map */

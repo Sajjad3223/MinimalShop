@@ -9,13 +9,11 @@
 @mixin scrollbar {
     /* width */
     &::-webkit-scrollbar {
-        margin: 1em;
         width: 10px;
     }
     
     /* Track */
     &::-webkit-scrollbar-track {
-        margin: 1em;
         background: #C4C4C4; 
         border-radius: 0.5em;
     }
@@ -134,15 +132,23 @@ body{
 }
 .color-danger{
     color: $danger-color;
+    fill: $danger-color;
 }
 .color-warning{
     color: $warning-color;
+    fill: $warning-color;
 }
 .color-primary{
     color: $primary-color;
+    fill: $primary-color;
 }
 .color-secondary{
     color: $secondary-color;
+    fill: $secondary-color;
+}
+.color-light{
+    color:#fff;
+    fill: #fff;
 }
 .btn{
     padding: 1em 3em;
@@ -151,6 +157,7 @@ body{
     border: none;
     border-radius: 1em;
     color: #fff;
+    fill: #fff;
     text-decoration: none;
     transition: background-color 0.3s ease;
     cursor: pointer;
@@ -194,6 +201,22 @@ body{
         pointer-events: none;
     }
 
+}
+.btn-nobg-primary{
+    display: flex;
+    align-items: center;
+    color: $primary-color;
+    text-decoration: none;
+    &:hover{
+        svg{
+            transform: translateX(-5px);
+        }
+    }
+    svg{
+        fill: $primary-color;
+        margin: 0 0.5em;
+        transition: transform 0.2s;
+    }
 }
 
 .px-5{
@@ -249,7 +272,7 @@ input[type=checkbox]:not(input.toggle){
     }
 }
 
-input[type=radio]{
+input[type=radio]:not(input.color-picker){
     position: relative;
     appearance: none;
     outline: none;
@@ -372,6 +395,8 @@ textarea{
 
 textarea.bordered{
     border: 3px solid $primary-color;
+    width: 100%;
+    margin: 1em 0 0 0;
     &:focus{
         box-shadow: none;
         border: 3px solid $primary-color;

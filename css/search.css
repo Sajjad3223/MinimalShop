@@ -42,8 +42,32 @@ div.main main {
   margin: 0 1em;
 }
 
+div.main main > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.main main > div > div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 div.main main .dropdown {
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
+}
+
+div.main main .cards-container {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 /*# sourceMappingURL=search.css.map */

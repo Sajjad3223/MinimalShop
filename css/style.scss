@@ -40,11 +40,15 @@ body{
 }
 
 .navbar{
+    display: flex;
     width: 100% !important;
     background-color: #F3F3F3;
     box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
     height: 80px;
+    align-items: center ;
     nav{
+        display: flex;
+        align-items: center ;
         width: 1200px;
         margin: 0 auto;
         a.logo{
@@ -56,12 +60,23 @@ body{
         }
         ul{
             list-style: none;
+            display: flex;
+            align-items: center;
             li{
                 margin: 0 0.5em;
                 a{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                     font-size: 14px;
                     text-decoration: none;
                     color: black;
+
+                    & > div{
+                        display: flex;
+                        align-items: center;
+                    }
+
                     & svg{
                         transition: transform 0.3s;
                     }
@@ -80,30 +95,15 @@ body{
                     }
                 }
             }
+
+            &:last-child{
+                margin-right: auto;
+            }
         }
     }
 }
 
-.row{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.row-reverse{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-}
 
-.column{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.float-left{
-    margin-right: auto !important;
-}
 
 .dropdown{
     position: relative;
@@ -226,12 +226,6 @@ body{
     }
 }
 
-.w-50{
-    width: 50% !important;
-}
-.w-60{
-    width: 60% !important;
-}
 
 hr{
     width: 95%;
@@ -239,21 +233,17 @@ hr{
     opacity: 0.7;
 }
 
-.align-items-start{
-    align-items: flex-start;
-}
-.align-items-end{
-    align-items: flex-end;
-}
 
 .cards-container{
+    display: flex;
     margin: 1em 0;
     width: 100%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     .card{
         background-color: #fff;
-        width: 30% !important;
+        width: 30%;
         max-width: 300px;
+        min-width: 280px;
         height: 370px;
         border-radius: 1em;
         display: flex;
@@ -285,15 +275,27 @@ hr{
             }
 
             & > div{
+                display: flex;
+                align-items: flex-end;
                 width: 95%;
                 margin: 1em auto;
             }
 
             .price-container{
+                display: flex;
+                width: 60%;
+                align-items: center;
+
                 svg{
                     margin-left: 0.5em;
                 }
+                .price{
+                    width: 60%;
+                    display: flex;
+                    flex-direction: column;
+                }
                 .real-price{
+                    display: flex;
                     s{
                         width: 100%;
                         text-align: center;
@@ -310,12 +312,20 @@ hr{
                         font-size: 0.8em;
                     }
                 }
+
+                    strong{
+                        display: flex;
+                        align-items: flex-end;
+                    }
             }
             .stars{
                 margin-top: 0.5em;
 
             }
             .bookmark{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 color: #000;
                 text-decoration: none;
                 margin-right: auto;
@@ -331,22 +341,5 @@ hr{
             }
 
         }
-    }
-}
-
-.btn-nobg-primary{
-    display: flex;
-    align-items: center;
-    color: $primary-color;
-    text-decoration: none;
-    &:hover{
-        svg{
-            transform: translateX(-5px);
-        }
-    }
-    svg{
-        stroke: $primary-color;
-        margin: 0 0.5em;
-        transition: transform 0.2s;
     }
 }

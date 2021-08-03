@@ -30,8 +30,23 @@ div.main{
     main{
         width: 75%;
         margin: 0 1em;
+        & > div{
+            display: flex;
+            align-items: center;
+            & > div{
+                &:last-child{
+                    display: flex;
+                    margin-right: auto;
+                    align-items: center;
+                }
+            }
+        }
         .dropdown{
             transform: scale(0.7);
+        }
+
+        .cards-container{
+            flex-wrap: wrap;
         }
     }
 }
