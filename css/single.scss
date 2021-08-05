@@ -1,6 +1,21 @@
 @import 'root';
 @import 'controls';
 
+.itemDetails{
+    display: flex;
+    flex-wrap: wrap;
+    main{
+        width: 70%;
+    }
+    aside{
+        width: 25%;
+    }
+    section{
+        width: 70%;
+    }
+
+}
+
 main,aside,.mainDetails{
     margin: 2em 1em;
     padding: 1em 2em;
@@ -275,6 +290,23 @@ section.mainDetails{
                                         outline: none;
                                         border: none;
                                         cursor: pointer;
+                                        position: relative;
+                                        height: 24px;
+                                        width: 20px;
+                                        &:before{
+                                            content: "";
+                                            display: block;
+                                            background-size: cover;
+                                            background-image: url(../imgs/trash.svg);
+                                            height: 24px;
+                                            width: 20px;
+                                            position: absolute;
+                                            pointer-events: none;
+                                            right: 0;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            transition: opacity 0.5s;
+                                        }
                                     }
                                 }
                             }

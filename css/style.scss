@@ -98,6 +98,185 @@ body{
 
             &:last-child{
                 margin-right: auto;
+                & > li{
+                    position: relative;
+                    &.basket:hover{
+                        & > div.basketItems{
+                            visibility: visible;
+                            opacity: 1;
+                            transform : translateY(0%);
+                        }
+                    }
+                    & > div.basketItems{
+                        visibility: collapse;
+                        position: absolute;
+                        z-index: 10;
+                        width: 350px;
+                        background-color: #fff;
+                        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+                        border-radius: 1em;
+                        left: 0;
+                        min-height: 200px;
+                        max-height: 450px;
+                        display: flex;
+                        justify-content: center;
+                        align-content: center;
+                        opacity: 0;
+                        transform: translateY(5%);
+                        transition: opacity 0.3s, visibility 0.3s,transform 0.3s;
+
+                        & > div.items{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            padding: 1em;
+                            div.top{
+                                width: 100%;
+                                display: flex;
+                                span{
+                                    font-size: 14px;
+                                    opacity: 0.5;
+                                    margin: 0 0.5em;
+                                }
+                                a{
+                                    margin-right: auto;
+                                    display: flex;
+                                    flex-direction: row;
+                                    color: $primary-color;
+                                    &:hover{
+                                        svg{
+                                            transform: translateX(-5px);
+                                        }
+                                    }
+                                }
+                            }
+
+                            ul{
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                list-style: none;
+                                max-height: 300px;
+                                overflow-y: auto;
+                                overflow-x: hidden;
+                                //@include scrollbar();
+                                &::-webkit-scrollbar{
+                                    display: none;
+                                }
+                                li{
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    padding: 0.5em;
+                                    border-bottom: 1px solid rgba(0, 0, 0, .4);
+                                    &:last-child{
+                                        border: none;
+                                    }
+
+                                    & > a {
+                                        align-self: flex-start;
+                                        margin: 0 0.5em;
+                                        img{
+                                            width: 50px;
+                                            border-radius: 0.5em;
+                                        }
+                                    }
+
+                                    button{
+                                        padding: 0;margin: 0;
+                                        display: grid;
+                                        place-items: center;
+                                        border-radius: 0.5em;
+                                        width: 30px !important; height: 30px !important;
+                                        margin-right: auto;
+                                    }
+                                    .content{
+                                        a{
+                                            font-size: 14px;
+                                        }
+                                        .details{
+                                            display: flex;
+                                            font-size: 12px;
+                                            margin: 0.5em 0;
+
+                                            .count,.color{
+                                                display: flex;
+                                                align-items: center;
+                                            }
+                                            .count{
+                                                div{
+                                                    font-size: 14px;
+                                                    margin: 0 1em;
+                                                    width: 25px;
+                                                    height: 25px;
+                                                    background-color: #E0E0E0;
+                                                    border-radius: 50%;
+                                                    text-align: center;
+                                                }
+                                            }
+                                            .color{
+                                                padding-right: 1em;
+                                                border-right: 1px solid rgba(0, 0, 0, .2);
+                                                div{
+                                                    margin: 0 0.5em;
+                                                    border-radius: 50%;
+                                                    width: 25px;
+                                                    height: 25px;
+                                                }
+                                            }
+
+                                        }
+                                        .price{
+                                            font-size: 14px;
+                                            strong{
+                                                margin: 0 0.5em;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            div.goBasket{
+                                padding-top: 0.5em 1em;
+                                margin-top: 0.5em;
+                                display: flex;
+                                align-items: center;
+                                width: 100%;
+                                border-top: 1px solid #000;
+                                div.totalPrice{
+                                    display: flex;
+                                    margin: 0 0.5em;
+                                    width: 50%;
+                                    flex-direction: column;
+                                    strong{
+                                        align-self: flex-end;
+                                    }
+                                }
+                                button{
+                                    width: 50%;
+                                    font-size: 14px;
+                                    padding: 1em;
+                                    border-radius: 10px;
+                                    margin-left: 0;
+                                }
+                            }
+                        }
+
+                        .NoBasketItem{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            margin: auto;
+                            span{
+                                width: 7vw;
+                                background-image: url(../imgs/basket.png);
+                                background-size: cover;
+                                height: 5.5vw;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

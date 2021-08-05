@@ -145,6 +145,259 @@ body > section > div:nth-of-type(1) a {
   margin-right: auto;
 }
 
+.navbar nav ul:last-child > li {
+  position: relative;
+}
+
+.navbar nav ul:last-child > li.basket:hover > div.basketItems {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.navbar nav ul:last-child > li > div.basketItems {
+  visibility: collapse;
+  position: absolute;
+  z-index: 10;
+  width: 350px;
+  background-color: #fff;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 1em;
+  left: 0;
+  min-height: 200px;
+  max-height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  opacity: 0;
+  -webkit-transform: translateY(5%);
+          transform: translateY(5%);
+  -webkit-transition: opacity 0.3s, visibility 0.3s,-webkit-transform 0.3s;
+  transition: opacity 0.3s, visibility 0.3s,-webkit-transform 0.3s;
+  transition: opacity 0.3s, visibility 0.3s,transform 0.3s;
+  transition: opacity 0.3s, visibility 0.3s,transform 0.3s, -webkit-transform 0.3s;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items div.top {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items div.top span {
+  font-size: 14px;
+  opacity: 0.5;
+  margin: 0 0.5em;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items div.top a {
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #0055FF;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items div.top a:hover svg {
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items ul::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items ul li {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items ul li:last-child {
+  border: none;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items ul li > a {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 0 0.5em;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items ul li > a img {
+  width: 50px;
+  border-radius: 0.5em;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items ul li button {
+  padding: 0;
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 0.5em;
+  width: 30px !important;
+  height: 30px !important;
+  margin-right: auto;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items ul li .content a {
+  font-size: 14px;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items ul li .content .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  margin: 0.5em 0;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items ul li .content .details .count, .navbar nav ul:last-child > li > div.basketItems > div.items ul li .content .details .color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items ul li .content .details .count div {
+  font-size: 14px;
+  margin: 0 1em;
+  width: 25px;
+  height: 25px;
+  background-color: #E0E0E0;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items ul li .content .details .color {
+  padding-right: 1em;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items ul li .content .details .color div {
+  margin: 0 0.5em;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items ul li .content .price {
+  font-size: 14px;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items ul li .content .price strong {
+  margin: 0 0.5em;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items div.goBasket {
+  padding-top: 0.5em 1em;
+  margin-top: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  border-top: 1px solid #000;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items div.goBasket div.totalPrice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0.5em;
+  width: 50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items div.goBasket div.totalPrice strong {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.navbar nav ul:last-child > li > div.basketItems > div.items div.goBasket button {
+  width: 50%;
+  font-size: 14px;
+  padding: 1em;
+  border-radius: 10px;
+  margin-left: 0;
+}
+
+.navbar nav ul:last-child > li > div.basketItems .NoBasketItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+.navbar nav ul:last-child > li > div.basketItems .NoBasketItem span {
+  width: 7vw;
+  background-image: url(../imgs/basket.png);
+  background-size: cover;
+  height: 5.5vw;
+}
+
 .dropdown {
   position: relative;
 }

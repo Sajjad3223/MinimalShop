@@ -814,6 +814,26 @@ input[type=file]:valid + label {
   margin: 0;
 }
 
+.itemDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.itemDetails main {
+  width: 70%;
+}
+
+.itemDetails aside {
+  width: 25%;
+}
+
+.itemDetails section {
+  width: 70%;
+}
+
 main, aside, .mainDetails {
   margin: 2em 1em;
   padding: 1em 2em;
@@ -1213,6 +1233,26 @@ section.mainDetails .comments form .strength-weakness > div > div div ul li butt
   outline: none;
   border: none;
   cursor: pointer;
+  position: relative;
+  height: 24px;
+  width: 20px;
+}
+
+section.mainDetails .comments form .strength-weakness > div > div div ul li button:before {
+  content: "";
+  display: block;
+  background-size: cover;
+  background-image: url(../imgs/trash.svg);
+  height: 24px;
+  width: 20px;
+  position: absolute;
+  pointer-events: none;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 section.mainDetails .comments form .strength-weakness > div.weakness > div div {

@@ -6,30 +6,7 @@
     box-sizing: border-box;
     font-family: 'vazir fd';
 }
-@mixin scrollbar {
-    /* width */
-    &::-webkit-scrollbar {
-        width: 10px;
-    }
-    
-    /* Track */
-    &::-webkit-scrollbar-track {
-        background: #C4C4C4; 
-        border-radius: 0.5em;
-    }
-    
-    /* Handle */
-    &::-webkit-scrollbar-thumb {
-        background: #F4F4F4; 
-        border-radius: 0.5em;
-        border: 3px #C4C4C4 solid;
-    }
-    
-    /* Handle on hover */
-    &::-webkit-scrollbar-thumb:hover {
-        background: #555; 
-    }
-}
+
 
 body{
     @include scrollbar();
