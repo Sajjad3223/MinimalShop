@@ -1,13 +1,5 @@
 @import 'root';
 
-*,*::after,*::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'vazir fd';
-}
-
-
 body{
     @include scrollbar();
 }
@@ -111,6 +103,15 @@ body{
         color: $primary-hover-color;
     }
 }
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
 .color-danger{
     color: $danger-color;
     fill: $danger-color;
@@ -131,6 +132,15 @@ body{
     color:#fff;
     fill: #fff;
 }
+.color-dark{
+    color:#000;
+    fill: #000;
+}
+
+.bg-light{
+    background-color: #fff;
+}
+
 .btn{
     padding: 1em 3em;
     margin: 0.8em;

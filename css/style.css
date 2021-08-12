@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -745,5 +746,56 @@ hr {
 
 .cards-container .card .content .bookmark:hover > svg {
   stroke: #0047D6;
+}
+
+footer {
+  padding: 1em 5em !important;
+}
+
+footer section:first-child h4 {
+  margin-right: -2em;
+}
+
+footer section:first-child li {
+  margin-bottom: 0.5em;
+}
+
+footer .dl-app a {
+  text-decoration: none;
+  margin: 0.5em 0;
+  border-radius: 0.5em;
+  color: black;
+  background-color: #DBDBDB;
+  padding: 1em 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+footer .dl-app a::before {
+  color: black;
+  content: "دانلود اپلیکیشن از";
+  position: absolute;
+  top: 10px;
+  right: 2em;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+footer .dl-app a h4 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-left: 1em;
+  width: 50%;
+}
+
+footer button[type=submit] {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

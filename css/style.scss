@@ -540,3 +540,51 @@ hr{
         }
     }
 }
+
+footer{
+    padding: 1em 5em !important;
+
+    section:first-child{
+        h4{
+            margin-right: -2em;
+        }
+        li{
+            margin-bottom: 0.5em;
+        }
+    }
+
+    .dl-app{
+        a{
+            text-decoration: none;
+            margin: 0.5em 0;
+            border-radius: 0.5em;
+            color: black;
+            background-color: #DBDBDB;
+            padding: 1em 2em;
+            display: flex;
+            align-items: center;
+            position: relative;
+            &::before{
+                color: black;
+                content: "دانلود اپلیکیشن از";
+                position: absolute;
+                top: 10px;
+                right: 2em;
+                font-size: 10px;
+                font-weight: bold;
+            }
+            h4{
+                align-self: flex-end;
+                margin-left: 1em;
+                width: 50%;
+                
+            }
+        }
+    }
+
+    button[type=submit]{
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+    }
+}

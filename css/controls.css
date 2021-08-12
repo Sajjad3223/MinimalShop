@@ -1,12 +1,4 @@
 @charset "UTF-8";
-*, *::after, *::before {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'vazir fd';
-}
-
 body {
   /* width */
   /* Track */
@@ -150,6 +142,18 @@ body::-webkit-scrollbar-thumb:hover {
   color: #0047D6;
 }
 
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
 .color-danger {
   color: #FF2F2F;
   fill: #FF2F2F;
@@ -173,6 +177,15 @@ body::-webkit-scrollbar-thumb:hover {
 .color-light {
   color: #fff;
   fill: #fff;
+}
+
+.color-dark {
+  color: #000;
+  fill: #000;
+}
+
+.bg-light {
+  background-color: #fff;
 }
 
 .btn {
