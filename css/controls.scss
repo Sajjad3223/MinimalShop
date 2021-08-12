@@ -106,6 +106,10 @@ body{
     text-decoration: none;
     color: $primary-color;
     cursor: pointer;
+    transition: color .3s;
+    &:hover{
+        color: $primary-hover-color;
+    }
 }
 .color-danger{
     color: $danger-color;

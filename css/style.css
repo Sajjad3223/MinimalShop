@@ -51,7 +51,7 @@ body > section > div:nth-of-type(1) a {
   display: -ms-flexbox;
   display: flex;
   width: 100% !important;
-  background-color: #F3F3F3;
+  background-color: #fff;
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   height: 80px;
@@ -496,11 +496,11 @@ body > section > div:nth-of-type(1) a {
 
 .searchBox input {
   width: 25vw;
-  background-color: #E0E0E0;
+  background-color: #eee;
   border: none;
   outline: none;
   padding: 1em;
-  border-radius: 1em;
+  border-radius: 2em;
 }
 
 .searchBox input::-webkit-search-decoration, .searchBox input::-webkit-search-cancel-button, .searchBox input::-webkit-search-results-button, .searchBox input::-webkit-search-results-decoration {
@@ -587,6 +587,14 @@ hr {
   -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   margin: 0.5em;
+  position: relative;
+  overflow: hidden;
+}
+
+.cards-container .card:hover .content .bookmark {
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+  opacity: 1;
 }
 
 .cards-container .card .cardImage {
@@ -709,6 +717,18 @@ hr {
   color: #000;
   text-decoration: none;
   margin-right: auto;
+  position: absolute;
+  top: 0;
+  left: 1em;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+  padding: 0.5em;
+  z-index: 9;
+  -webkit-transition: opacity .3s,stroke 0.5s , -webkit-transform 0.3s;
+  transition: opacity .3s,stroke 0.5s , -webkit-transform 0.3s;
+  transition: transform 0.3s , opacity .3s,stroke 0.5s;
+  transition: transform 0.3s , opacity .3s,stroke 0.5s , -webkit-transform 0.3s;
 }
 
 .cards-container .card .content .bookmark span {
@@ -720,10 +740,10 @@ hr {
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
+  stroke: #0055FF;
 }
 
 .cards-container .card .content .bookmark:hover > svg {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  stroke: #0047D6;
 }
 /*# sourceMappingURL=style.css.map */

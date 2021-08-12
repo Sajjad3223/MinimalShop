@@ -1,0 +1,347 @@
+.oveview {
+  background-color: white;
+  border-radius: 1em;
+  padding: 2em;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.oveview > .top {
+  width: 100%;
+}
+
+.oveview > .top div.levels {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.oveview > .top div.levels span {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin: 0 0.5em;
+  border-radius: 1em;
+  width: 150px;
+  height: 2em;
+  font-size: 14px;
+  text-align: center;
+  background-color: #85FFE9;
+  position: relative;
+}
+
+.oveview > .top div.levels span.passed {
+  background-color: #0055FF;
+  color: #fff;
+}
+
+.oveview > .top div.levels span.passed::before {
+  background-color: #0055FF;
+}
+
+.oveview > .top div.levels span:first-child::before {
+  display: none;
+}
+
+.oveview > .top div.levels span::before {
+  position: absolute;
+  content: "";
+  width: 1em;
+  height: 3px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -1em;
+  background-color: #85FFE9;
+}
+
+.oveview > main > .itemsContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 1em;
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+  padding-left: 1em;
+}
+
+.oveview > main > .itemsContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+.oveview > main > .itemsContainer::-webkit-scrollbar-track {
+  background: #C4C4C4;
+  border-radius: 0.5em;
+}
+
+.oveview > main > .itemsContainer::-webkit-scrollbar-thumb {
+  background: #F4F4F4;
+  border-radius: 0.5em;
+  border: 3px #C4C4C4 solid;
+}
+
+.oveview > main > .itemsContainer::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.oveview > main > .itemsContainer > .item {
+  margin-top: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.oveview > main > .itemsContainer > .item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 1em;
+  margin-left: 1em;
+}
+
+.oveview > main > .itemsContainer > .item > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.oveview > main > .itemsContainer > .item > div.info {
+  width: 40%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.oveview > main > .itemsContainer > .item > div.info a {
+  width: 100%;
+  color: black;
+  text-decoration: none;
+}
+
+.oveview > main > .itemsContainer > .item > div.info .details, .oveview > main > .itemsContainer > .item > div.info .details > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.oveview > main > .itemsContainer > .item > div.info .details {
+  width: 100%;
+}
+
+.oveview > main > .itemsContainer > .item > div.info .details .countContainer {
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  margin-left: 1em;
+}
+
+.oveview > main > .itemsContainer > .item > div.info .details .countContainer .count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 1em;
+}
+
+.oveview > main > .itemsContainer > .item > div.info .details .countContainer .count input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  outline: none;
+  border: 3px solid #0055FF;
+  border-radius: 0.5em;
+  max-width: 40px;
+  text-align: center;
+  font-size: 14px;
+  padding: 0.5em 0;
+}
+
+.oveview > main > .itemsContainer > .item > div.info .details .countContainer .count input::-webkit-outer-spin-button, .oveview > main > .itemsContainer > .item > div.info .details .countContainer .count input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.oveview > main > .itemsContainer > .item > div.info .details .countContainer .count button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+}
+
+.oveview > main > .itemsContainer > .item > div.info .details .colorContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+}
+
+.oveview > main > .itemsContainer > .item > div.info .details .colorContainer div.color {
+  margin: 0 1em;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.oveview > main > .itemsContainer > .item > div.partPrice, .oveview > main > .itemsContainer > .item > div.totalPrice {
+  width: 20%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.oveview > main > .itemsContainer > .item > div.partPrice strong, .oveview > main > .itemsContainer > .item > div.totalPrice strong {
+  margin-bottom: 1em;
+}
+
+.oveview > main > .itemsContainer > .item > button {
+  -ms-grid-row-align: center;
+      align-self: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  margin: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 0.5em;
+}
+
+.oveview aside {
+  border-radius: 1em;
+  border: 3px solid #0055FF;
+  padding: 1.5em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.oveview aside > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.oveview aside > div:last-of-type {
+  border: none;
+}
+
+.oveview aside > div span {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.oveview aside > div span:hover small {
+  opacity: 1;
+}
+
+.oveview aside > div span small {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -120%);
+          transform: translate(-50%, -120%);
+  width: 20em;
+  padding: 0.5em;
+  background-color: white;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 5px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.oveview aside > div span svg {
+  margin-right: 0.5em;
+}
+
+.oveview aside > div strong {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.oveview aside button {
+  margin: 0;
+}
+
+.empty {
+  background-color: white;
+  border-radius: 1em;
+  padding: 2em;
+  margin: 2em 4em;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.empty > * {
+  margin: 0.5em 0;
+}
+
+.empty form {
+  width: 50%;
+}
+
+.empty form input {
+  width: 100%;
+}
+
+.empty div a:first-child {
+  padding-left: 0.5em;
+  margin-left: 0.5em;
+  border-left: 0.5px solid #969696;
+}
+/*# sourceMappingURL=cardOverview.css.map */

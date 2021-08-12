@@ -254,6 +254,8 @@
                                 <li class="col"><img src="imgs/singleImage.png" alt="img"></li>
                             </ul>
                         </div>
+                        <div class="fade-l"></div>
+                        <div class="fade-r"></div>
                 
                         <button id="btnNext" disabled>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
@@ -452,19 +454,19 @@
                     <div class="col-12">
                         <h4 class="col-6">نظر شما در مورد این کالا:</h4>
                     </div>
-                    <div class="message col">
+                    <div class="message col-7">
                         <div>
                             <label for="message">متن پیام:</label>
-                            <textarea name="message" class="bordered" id="message" rows="15" placeholder="متن پیام خود را وارد کنید"></textarea>
+                            <textarea name="message" class="bordered" id="message" rows="15" maxlength="500" placeholder="متن پیام خود را وارد کنید"></textarea>
                             <span>0/500</span>
                         </div>
                         <button type="submit" class="btn col-12 mx-auto btn-warning">ثبت نظر</button>
                     </div>
                     <div class="strength-weakness col">
                         <div class="strength align-items-baseline row">
-                            <strong class="col-2">مزایا:</strong>
+                            <strong class="col-12">مزایا:</strong>
                             <div class="col row" >
-                                <input type="text" class="bordered col-8" id="strengthInput" placeholder="مزایای کالا">
+                                <input type="text" class="bordered col" id="strengthInput" placeholder="مزایای کالا">
                                 <button class=" col-4 btn btn-primary">
                                     افزودن
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -482,9 +484,9 @@
                         </div>
 
                         <div class="weakness align-items-baseline row">
-                            <strong class="col-2">معایب:</strong>
+                            <strong class="col-12">معایب:</strong>
                             <div class="col row" >
-                                <input type="text" class="bordered col-8" id="weaknessInput" placeholder="معایب کالا">
+                                <input type="text" class="bordered col" id="weaknessInput" placeholder="معایب کالا">
                                 <button class="col-4 btn btn-primary">
                                     افزودن
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -952,6 +954,8 @@
                 <path d="M2 26L14 14L2 2" stroke="#212135" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </button>
+        <div class="fade-l"></div>
+        <div class="fade-r"></div>
     </div>
     <!-- #endregion -->
 
@@ -1085,6 +1089,11 @@ $(function(){
         }
     })
 
+    $('#message').on('input',function(){
+        var span = $(this).siblings('span');
+        $(span).text("500/" + $(this).val().length)
+
+    })
 })
 </script>
 </body>

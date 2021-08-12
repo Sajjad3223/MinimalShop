@@ -24,6 +24,9 @@ $background-color:#E0F8FF;
         background: #555; 
     }
 }
+@mixin shadow {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
 
 // #region main colors
 $primary-color:#0055FF;

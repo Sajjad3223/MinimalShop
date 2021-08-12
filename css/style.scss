@@ -42,7 +42,7 @@ body{
 .navbar{
     display: flex;
     width: 100% !important;
-    background-color: #F3F3F3;
+    background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
     height: 80px;
     align-items: center ;
@@ -357,11 +357,11 @@ body{
     position: relative;
     input{
         width: 25vw;
-        background-color: #E0E0E0;
+        background-color: #eee;
         border: none;
         outline: none;
         padding: 1em ;
-        border-radius: 1em;
+        border-radius: 2em;
 
         &::-webkit-search-decoration,
         &::-webkit-search-cancel-button,
@@ -429,6 +429,15 @@ hr{
         flex-direction: column;
         box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
         margin: 0.5em;
+        position: relative;
+        overflow: hidden;
+
+        &:hover{
+            .content .bookmark{
+                transform: translateY(10%);
+                opacity: 1;
+            }
+        }
 
         .cardImage{
             width: 100%;
@@ -499,7 +508,6 @@ hr{
             }
             .stars{
                 margin-top: 0.5em;
-
             }
             .bookmark{
                 display: flex;
@@ -508,13 +516,23 @@ hr{
                 color: #000;
                 text-decoration: none;
                 margin-right: auto;
+                position: absolute;
+                top: 0;
+                left: 1em;
+                transform: translateY(-100%);
+                opacity: 0;
+                padding: 0.5em;
+                z-index: 9;
+                transition: transform 0.3s , opacity .3s,stroke 0.5s;
+
                 span{margin-top: 0.5em;}
                 & svg{
                     transition: transform 0.3s;
+                    stroke: $primary-color;
                 }
                 &:hover{
                     & > svg{
-                        transform: translateY(-5px);
+                        stroke: $primary-hover-color;
                     }
                 }
             }

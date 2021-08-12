@@ -45,6 +45,7 @@ main{
                 top: 40%;
                 cursor: pointer;
                 transition: transform 0.3s;
+                z-index: 5;
                 svg{
                     width: 1em;
                     color: #000;
@@ -245,7 +246,8 @@ section.mainDetails{
                         input{
                             width: 60%;
                             height: 50px;
-                            margin: 0 1em;
+                            margin: 0;
+                            margin-left: 1em;
                             border-radius: 8px;
                         }
                         & > button{
@@ -375,10 +377,21 @@ section.mainDetails{
         top: 50%;
         appearance: none;
         cursor: pointer;
-        border: none;
+        border: 2px solid #fff;
         outline: none;
-        background-color: transparent;
-        transition: transform 0.3s;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(20px);
+        width: 50px;
+        height: 50px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        transition: transform 0.3s,background-color 0.3s;
+        z-index: 5;
+
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.8);
+        }
         &#right{
             right: 5px;
             &:hover{
@@ -394,6 +407,47 @@ section.mainDetails{
                 transform: translateX(-5px);
             }
         }
+    }
+}
+.fade-l{
+    position: absolute;
+    height: 100%;
+    margin: 1em 0;
+    top: 0;
+    left: 0;
+    width: 5em;
+    z-index  : 1;
+    pointer-events   : none;
+    background-image : linear-gradient(to left, 
+                rgba(255,255,255, 0), 
+                rgba(#E0F8FF, 1) 90%);
+}
+.fade-r{
+    position: absolute;
+    height: 100%;
+    margin: 1em 0;
+    top: 0;
+    right: 0;
+    width: 4em;
+    z-index  : 1;
+    pointer-events   : none;
+    background-image : linear-gradient(to right, 
+                rgba(255,255,255, 0), 
+                rgba(#E0F8FF, 1) 90%);
+}
+.imgs{
+    .fade-l,.fade-r{
+        margin: 0;
+    }
+    .fade-r{
+        background-image : linear-gradient(to right, 
+        rgba(255,255,255, 0), 
+        rgba(#fff, 1) 90%);
+    }
+    .fade-l{
+        background-image : linear-gradient(to left, 
+        rgba(255,255,255, 0), 
+        rgba(#fff, 1) 90%);
     }
 }
 
