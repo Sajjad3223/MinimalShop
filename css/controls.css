@@ -357,10 +357,10 @@ input[type=radio]:not(input.color-picker)::before {
 
 input[type=radio]:not(input.color-picker)::after {
   position: absolute;
+  width: 1em;
+  height: 1em;
   top: 50%;
   left: 50%;
-  width: 60%;
-  height: 60%;
   content: ' ';
   border-radius: 50%;
   background-color: #0055FF;

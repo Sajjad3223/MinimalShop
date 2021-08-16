@@ -155,6 +155,58 @@
             }
         }
     }
+    & > main.sendInfo > div{
+        width: 100%;
+        margin: 0.5em 0;
+        padding: 1em 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        position: relative;
+
+        &:last-child{
+            border: none;
+        }
+        &.address,&.sendMethod{
+            & > div{
+                margin: 0.5em 1em;
+                display: flex;
+                align-items: center;
+                span{
+                    font-size: 13px;
+                    margin: 0 auto;
+                }
+            }
+        }
+        &.receiver{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            h4{width: 100%; margin-bottom: 1em;}
+            padding-left: 4em;
+            div{
+                margin-right: 1em;
+            }
+        }
+        button{
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            svg{margin-left: 1em; stroke: $primary-color;}
+            position: absolute;
+            top: 1em;
+            left: 2em;
+            font-weight: bolder;
+            &:hover{
+                color: $primary-hover-color;
+                svg{stroke: $primary-hover-color;}
+            }
+        }
+    }
+
+
+
 
     aside{
         border-radius: 1em;
@@ -167,6 +219,7 @@
             display: flex;
             flex-direction: column;
             border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+            margin: 0.5em 0;
             &:last-of-type{
                 border: none;
             }
@@ -205,6 +258,58 @@
             margin: 0;
         }
     }
+}
+
+.modal{
+    position: fixed;
+    inset: 0;
+    z-index: 8;
+
+    & > .bg{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+    }
+
+    & > form{
+        margin: 0 5em;
+        top: 10%;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        border: 3px solid $primary-color;
+        border-radius: 1em;
+        padding: 1em 2em;
+        z-index: 10;
+        position: relative;
+        h4{
+            margin-bottom: 1em;
+        }
+        & > div{
+            margin:0.5em 0;
+        }
+        & > button{
+            margin-right: auto;
+        }
+        & > .close{
+            background-color: transparent;
+            color: $danger-color;
+            border: none;
+            outline: none;
+            position: absolute;
+            top: 0.5em;
+            left: 1em;
+            cursor: pointer;
+            width: auto;
+            font-size: 1.5em;
+            font-weight: bolder;
+            transition: color .2s;
+            &:hover{
+                color: $danger-hover-color;
+            }
+        }
+    }
+
 }
 
 .empty{
