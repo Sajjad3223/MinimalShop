@@ -160,8 +160,8 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .color-warning {
-  color: #C7B300;
-  fill: #C7B300;
+  color: #E5EA00;
+  fill: #E5EA00;
 }
 
 .color-primary {
@@ -229,11 +229,11 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .btn.btn-warning {
-  background-color: #C7B300;
+  background-color: #E5EA00;
 }
 
 .btn.btn-warning:hover {
-  background-color: #A09000;
+  background-color: #D4D900;
 }
 
 .btn.btn-secondary {

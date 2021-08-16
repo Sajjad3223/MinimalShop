@@ -176,6 +176,7 @@ body{
     }
     &.btn-warning{
         background-color: $warning-color;
+        color: #000;
         &:hover{
             background-color: $warning-hover-color;
         }

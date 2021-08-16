@@ -702,6 +702,12 @@ hr {
 
 .cards-container .card .content .stars {
   margin-top: 0.5em;
+  stroke: #E5EA00;
+}
+
+.cards-container .card .content .stars .filled {
+  fill: #E5EA00;
+  stroke: none;
 }
 
 .cards-container .card .content .bookmark {

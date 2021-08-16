@@ -508,6 +508,8 @@ hr{
             }
             .stars{
                 margin-top: 0.5em;
+                stroke: $warning-color;
+                & .filled {fill: $warning-color; stroke: none;}
             }
             .bookmark{
                 display: flex;
