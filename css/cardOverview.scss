@@ -155,16 +155,21 @@
             }
         }
     }
-    & > main.sendInfo > div{
+
+    & > main > div{
         width: 100%;
         margin: 0.5em 0;
         padding: 1em 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        position: relative;
 
-        &:last-child{
+        &:last-of-type{
             border: none;
         }
+    }
+
+    & > main.sendInfo > div{
+        position: relative;
+        
         &.address,&.sendMethod{
             & > div{
                 margin: 0.5em 1em;
@@ -204,9 +209,94 @@
             }
         }
     }
+    & > main.payment{
+        .discount{
+            input{
+                & ~ svg{
+                    display: none;
+                }
+            }
+            input[data-applied="true"]{
+                & ~ button{
+                    display: none;
+                }
+                & ~ svg{
+                    display: block;
+                }
+            }
+            button{
+                font-size: 14px;
+                padding: 0.5em 1.5em;
+                border-radius: 0.5em;
+            }
+        }
+        .digits{
+            ul.itemsContainer{
+                list-style: none;
+                display: flex;
+                margin-top: 1em;
+                overflow-x: scroll;
+                flex-wrap: nowrap;
+                position: relative;
+                @include scrollbar();
+                padding-bottom: 1em;
 
+                li.item{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border-left: 1px solid rgba(0, 0, 0, 0.3);
+                    padding: 0 1em;
+                    &:last-of-type{
+                        border: none;
+                    }
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 0.5em;
+                    }
+                    & > div{
+                        display: flex;
+                        margin-top: 0.5em;
+                        span{
+                            display: flex;
+                            div{
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
+                                text-align: center;
+                                margin: 0 0.4em;
+                                background-color: #DADADA;
+                            }
+                        }
+                    }
+                    
 
+                }
+            }
+        }
+    }
+    
 
+    & > main > a{
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        transition: color 0.3s;
+        svg{
+            margin: 0 0.5em;
+            stroke: $primary-color;
+            transition: transform 0.3s,stroke 0.3s;
+        }
+        &:hover{
+            color: $primary-hover-color;
+            svg{
+                stroke: $primary-hover-color;
+                transform: translateX(5px);
+            }
+        }
+    }
 
     aside{
         border-radius: 1em;
@@ -249,6 +339,12 @@
                 svg{
                     margin-right: 0.5em;
                 }
+            }
+            & > small.discount{
+                margin-right: auto;
+                margin-left: 3em;
+                font-weight: bold;
+                color: $danger-color;
             }
             strong{
                 align-self: flex-end;

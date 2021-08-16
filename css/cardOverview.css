@@ -229,16 +229,19 @@
   border-radius: 0.5em;
 }
 
-.oveview > main.sendInfo > div {
+.oveview > main > div {
   width: 100%;
   margin: 0.5em 0;
   padding: 1em 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  position: relative;
 }
 
-.oveview > main.sendInfo > div:last-child {
+.oveview > main > div:last-of-type {
   border: none;
+}
+
+.oveview > main.sendInfo > div {
+  position: relative;
 }
 
 .oveview > main.sendInfo > div.address > div, .oveview > main.sendInfo > div.sendMethod > div {
@@ -305,6 +308,141 @@
 
 .oveview > main.sendInfo > div button:hover svg {
   stroke: #0047D6;
+}
+
+.oveview > main.payment .discount input ~ svg {
+  display: none;
+}
+
+.oveview > main.payment .discount input[data-applied="true"] ~ button {
+  display: none;
+}
+
+.oveview > main.payment .discount input[data-applied="true"] ~ svg {
+  display: block;
+}
+
+.oveview > main.payment .discount button {
+  font-size: 14px;
+  padding: 0.5em 1.5em;
+  border-radius: 0.5em;
+}
+
+.oveview > main.payment .digits ul.itemsContainer {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1em;
+  overflow-x: scroll;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: relative;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+  padding-bottom: 1em;
+}
+
+.oveview > main.payment .digits ul.itemsContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+.oveview > main.payment .digits ul.itemsContainer::-webkit-scrollbar-track {
+  background: #C4C4C4;
+  border-radius: 0.5em;
+}
+
+.oveview > main.payment .digits ul.itemsContainer::-webkit-scrollbar-thumb {
+  background: #F4F4F4;
+  border-radius: 0.5em;
+  border: 3px #C4C4C4 solid;
+}
+
+.oveview > main.payment .digits ul.itemsContainer::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.oveview > main.payment .digits ul.itemsContainer li.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0 1em;
+}
+
+.oveview > main.payment .digits ul.itemsContainer li.item:last-of-type {
+  border: none;
+}
+
+.oveview > main.payment .digits ul.itemsContainer li.item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 0.5em;
+}
+
+.oveview > main.payment .digits ul.itemsContainer li.item > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0.5em;
+}
+
+.oveview > main.payment .digits ul.itemsContainer li.item > div span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.oveview > main.payment .digits ul.itemsContainer li.item > div span div {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 0.4em;
+  background-color: #DADADA;
+}
+
+.oveview > main > a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.oveview > main > a svg {
+  margin: 0 0.5em;
+  stroke: #0055FF;
+  -webkit-transition: stroke 0.3s,-webkit-transform 0.3s;
+  transition: stroke 0.3s,-webkit-transform 0.3s;
+  transition: transform 0.3s,stroke 0.3s;
+  transition: transform 0.3s,stroke 0.3s,-webkit-transform 0.3s;
+}
+
+.oveview > main > a:hover {
+  color: #0047D6;
+}
+
+.oveview > main > a:hover svg {
+  stroke: #0047D6;
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
 }
 
 .oveview aside {
@@ -376,6 +514,13 @@
 
 .oveview aside > div span svg {
   margin-right: 0.5em;
+}
+
+.oveview aside > div > small.discount {
+  margin-right: auto;
+  margin-left: 3em;
+  font-weight: bold;
+  color: #FF2F2F;
 }
 
 .oveview aside > div strong {
