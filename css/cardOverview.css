@@ -446,6 +446,9 @@
 }
 
 .oveview aside {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2em;
   border-radius: 1em;
   border: 3px solid #0055FF;
   padding: 1.5em 1em;
@@ -459,6 +462,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  max-height: 30em;
 }
 
 .oveview aside > div {
@@ -528,8 +532,9 @@
       align-self: flex-end;
 }
 
-.oveview aside button {
+.oveview aside a {
   margin: 0;
+  border-radius: 0.5em;
 }
 
 .modal {

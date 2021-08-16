@@ -230,6 +230,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .btn.btn-warning {
   background-color: #E5EA00;
+  color: #000;
 }
 
 .btn.btn-warning:hover {

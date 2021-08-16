@@ -159,14 +159,14 @@ body > section > div:nth-of-type(1) a {
 
 .navbar nav ul:last-child > li > div.basketItems {
   visibility: collapse;
-  position: absolute;
+  position: fixed;
   z-index: 10;
   width: 350px;
   background-color: #fff;
   -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   border-radius: 1em;
-  left: 0;
+  left: 10%;
   min-height: 200px;
   max-height: 450px;
   display: -webkit-box;
@@ -370,7 +370,7 @@ body > section > div:nth-of-type(1) a {
       align-self: flex-end;
 }
 
-.navbar nav ul:last-child > li > div.basketItems > div.items div.goBasket button {
+.navbar nav ul:last-child > li > div.basketItems > div.items div.goBasket a {
   width: 50%;
   font-size: 14px;
   padding: 1em;

@@ -109,13 +109,13 @@ body{
                     }
                     & > div.basketItems{
                         visibility: collapse;
-                        position: absolute;
+                        position: fixed;
                         z-index: 10;
                         width: 350px;
                         background-color: #fff;
                         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
                         border-radius: 1em;
-                        left: 0;
+                        left: 10%;
                         min-height: 200px;
                         max-height: 450px;
                         display: flex;
@@ -253,7 +253,7 @@ body{
                                         align-self: flex-end;
                                     }
                                 }
-                                button{
+                                a{
                                     width: 50%;
                                     font-size: 14px;
                                     padding: 1em;

@@ -299,12 +299,15 @@
     }
 
     aside{
+        position: sticky;
+        top: 2em;
         border-radius: 1em;
         border: 3px solid $primary-color;
         padding: 1.5em 1em;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        max-height: 30em;
         & > div{
             display: flex;
             flex-direction: column;
@@ -350,8 +353,9 @@
                 align-self: flex-end;
             }
         }
-        button{
+        a{
             margin: 0;
+            border-radius: 0.5em;
         }
     }
 }

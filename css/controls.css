@@ -214,6 +214,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .btn.btn-primary {
   background-color: #0055FF;
+  color: #fff;
 }
 
 .btn.btn-primary:hover {
