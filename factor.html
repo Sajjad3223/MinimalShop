@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فروشگاه</title>
+    <title>فاکتور ارسال</title>
     <link rel="stylesheet" href="css/Bootstrap/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/controls.css">
@@ -230,302 +230,228 @@
     </div>
     <!-- #endregion -->
 
-    <!-- #region cart cardOverview -->
-    <div class="overview row m-4">
+    <!-- #region cart payment -->
+    <div class="sendFactor row m-4">
         <div class="top col-12 d-flex">
             <h3>تکمیل خرید</h3>
             <div class="levels mx-4">
                 <span class="passed">مشاهده سبد خرید</span>
-                <span>اطلاعات ارسال</span>
-                <span>پرداخت</span>
-                <span>مشاهده فاکتور</span>
+                <span class="passed">اطلاعات ارسال</span>
+                <span class="passed">پرداخت</span>
+                <span class="passed">مشاهده فاکتور</span>
             </div>
         </div>
-        <main class="col-9">
-            <div class="itemsContainer">
-                <div class="item">
-                    <img src="imgs/singleImage.png" alt="img">
-                    <div class="info">
-                        <a href=""><h4>نام کالا در اینجا نمایش داده میشود</h4></a>
-                        <div class="details">
-                            <div class="countContainer">
-                                <label for="count">تعداد</label>
-                                <div class="count">
-                                    <button class="add">
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5 1V5M5 9V5M5 5H9H1" stroke="#212135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </button>
 
-                                    <input type="number" name="count" id="count" value="3">
+        <button id="printFactor" class="btn btn-success">
+            چاپ فاکتور
+            <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="19" cy="11" r="1" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.965 6.40841C18.7076 6.49081 19.3644 6.59743 19.9444 6.73278C19.9831 6.327 20 5.8828 20 5.39684C20 0.952542 18.588 0 12 0C5.412 0 4 0.952542 4 5.39684C4 5.8828 4.01688 6.327 4.05557 6.73278C4.63556 6.59743 5.29244 6.49081 6.03502 6.40841C6.01267 6.12419 6 5.79023 6 5.39684C6 3.24504 6.37903 2.87125 6.648 2.68981C6.88639 2.52899 7.34831 2.33394 8.26722 2.19617C9.17726 2.05973 10.3828 2 12 2C13.6172 2 14.8227 2.05973 15.7328 2.19617C16.6517 2.33394 17.1136 2.52899 17.352 2.68981C17.621 2.87125 18 3.24504 18 5.39684C18 5.79023 17.9873 6.12419 17.965 6.40841Z" fill="white"/>
+                <path d="M5 20C5 22.4969 5.37712 23.5178 6.12165 24.0738C6.52707 24.3765 7.14058 24.6197 8.1155 24.7786C9.0888 24.9373 10.3423 25 11.9677 25C13.5928 25 14.8509 24.9373 15.8308 24.7785C16.8125 24.6194 17.4364 24.3755 17.8513 24.0698C18.6103 23.5108 19 22.4873 19 20C19 18.4675 18.9974 17.4313 18.8854 16.6784C18.7777 15.9546 18.5962 15.6996 18.3975 15.5512C18.1369 15.3565 17.6325 15.1819 16.5286 15.0903C15.4504 15.0008 13.9941 15 11.9677 15C9.95728 15 8.51346 15.0008 7.44474 15.0903C6.3507 15.1818 5.85357 15.356 5.59751 15.5488C5.40169 15.6963 5.22087 15.9514 5.11378 16.6772C5.00259 17.4308 5 18.4678 5 20Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2 13.4871C2 15.1286 2.0696 16.1799 2.26223 16.9116C2.42747 17.5393 2.64748 17.8048 2.96252 18.0089C3.19569 18.16 3.53989 18.3123 4.06143 18.4485C4.01858 18.9174 4 19.4332 4 20C4 20.1678 4.00163 20.3311 4.00503 20.49C0.444864 19.7281 0 17.8566 0 13.4871C0 6.93589 2 6 12 6C23 6 24 6.93589 24 13.4871C24 17.8566 23.5551 19.7281 19.995 20.49C19.9984 20.3311 20 20.1678 20 20C20 19.4332 19.9814 18.9174 19.9386 18.4485C20.4601 18.3123 20.8043 18.16 21.0375 18.0089C21.3525 17.8048 21.5725 17.5393 21.7378 16.9116C21.9304 16.1799 22 15.1286 22 13.4871C22 11.8457 21.9304 10.7943 21.7378 10.0626C21.5725 9.43494 21.3525 9.16945 21.0375 8.96533C20.6153 8.6918 19.8291 8.41418 18.2854 8.2353C16.7687 8.05956 14.7436 8 12 8C9.51158 8 7.61167 8.05935 6.14313 8.23452C4.65748 8.41173 3.79905 8.68894 3.28106 9.00059C2.53805 9.44762 2 10.2523 2 13.4871Z" fill="white"/>
+            </svg>
+                
+        </button>
 
-                                    <button class="minus">
-                                        <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 1H9" stroke="#212135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="colorContainer">
-                                <span>رنگ</span>
-                                <div class="color" style="background-color: blue;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partPrice">
-                        <h4>قیمت کالا</h4>
-                        <strong>600,000 <sub>تومان</sub></strong>
-                    </div>
-                    <div class="totalPrice">
-                        <h4>قیمت کل</h4>
-                        <strong>1,800,000 <sub>تومان</sub></strong>
-                    </div>
-                    <button class="btn btn-danger">
-                        <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.46838 18.5327C1.54314 18.8689 1.61496 19.1941 1.68448 19.509C2.08574 21.3261 2.41028 22.7958 2.77925 24.0146C3.21041 25.4388 3.66934 26.3989 4.28235 27.0814C5.46972 28.4033 7.52752 28.9996 12.4998 28.9996C17.4721 28.9996 19.5299 28.4033 20.7173 27.0814C21.3303 26.3989 21.7892 25.4388 22.2204 24.0146C22.5894 22.7958 22.9139 21.3261 23.3152 19.5091C23.3847 19.1942 23.4565 18.8689 23.5313 18.5327C24.5092 14.1348 23.89 11.8305 22.3204 10.5167C21.4874 9.8195 20.2867 9.30573 18.6316 8.9724C16.9793 8.63963 14.9425 8.49991 12.4998 8.49991C10.0571 8.49991 8.02035 8.63963 6.36804 8.9724C4.71298 9.30573 3.51226 9.8195 2.67932 10.5167C1.10971 11.8305 0.490452 14.1348 1.46838 18.5327Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12.4999 14.9998V22.4997M7.5 14.9998V22.4997M17.4999 14.9998V22.4997" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9999 2.83883C19.5218 3.16883 22.5455 4.35797 24.2655 5.39312C24.7387 5.67792 24.8914 6.29238 24.6066 6.76558C24.3218 7.23877 23.7073 7.3915 23.2342 7.10671C21.5614 6.09995 18.1092 4.74995 12.5 4.74995C6.87596 4.74995 3.32488 6.10631 1.79035 7.09143C1.3256 7.38979 0.706969 7.2549 0.408607 6.79015C0.110244 6.32539 0.245134 5.70676 0.70989 5.4084C2.35126 4.35468 5.45958 3.16723 10 2.83839V1C10 0.447716 10.4477 0 11 0H13.9999C14.5522 0 14.9999 0.447715 14.9999 1V2.83883Z" fill="white"/>
-                        </svg>
-                    </button>
+        <div class="factor">
+            <div class="factorDetails">
+                <h4>جزئیات فاکتور</h4>
+                <div>
+                    <span>شماره فاکتور:</span>
+                    <strong>1752</strong>
                 </div>
-                <div class="item">
-                    <img src="imgs/singleImage.png" alt="img">
-                    <div class="info">
-                        <a href=""><h4>نام کالا در اینجا نمایش داده میشود</h4></a>
-                        <div class="details">
-                            <div class="countContainer">
-                                <label for="count">تعداد</label>
-                                <div class="count">
-                                    <button>
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5 1V5M5 9V5M5 5H9H1" stroke="#212135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </button>
-
-                                    <input type="number" name="count" id="count" value="3">
-
-                                    <button>
-                                        <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 1H9" stroke="#212135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="colorContainer">
-                                <span>رنگ</span>
-                                <div class="color" style="background-color: blue;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partPrice">
-                        <h4>قیمت کالا</h4>
-                        <strong>600,000 <sub>تومان</sub></strong>
-                    </div>
-                    <div class="totalPrice">
-                        <h4>قیمت کل</h4>
-                        <strong>1,800,000 <sub>تومان</sub></strong>
-                    </div>
-                    <button class="btn btn-danger">
-                        <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.46838 18.5327C1.54314 18.8689 1.61496 19.1941 1.68448 19.509C2.08574 21.3261 2.41028 22.7958 2.77925 24.0146C3.21041 25.4388 3.66934 26.3989 4.28235 27.0814C5.46972 28.4033 7.52752 28.9996 12.4998 28.9996C17.4721 28.9996 19.5299 28.4033 20.7173 27.0814C21.3303 26.3989 21.7892 25.4388 22.2204 24.0146C22.5894 22.7958 22.9139 21.3261 23.3152 19.5091C23.3847 19.1942 23.4565 18.8689 23.5313 18.5327C24.5092 14.1348 23.89 11.8305 22.3204 10.5167C21.4874 9.8195 20.2867 9.30573 18.6316 8.9724C16.9793 8.63963 14.9425 8.49991 12.4998 8.49991C10.0571 8.49991 8.02035 8.63963 6.36804 8.9724C4.71298 9.30573 3.51226 9.8195 2.67932 10.5167C1.10971 11.8305 0.490452 14.1348 1.46838 18.5327Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12.4999 14.9998V22.4997M7.5 14.9998V22.4997M17.4999 14.9998V22.4997" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9999 2.83883C19.5218 3.16883 22.5455 4.35797 24.2655 5.39312C24.7387 5.67792 24.8914 6.29238 24.6066 6.76558C24.3218 7.23877 23.7073 7.3915 23.2342 7.10671C21.5614 6.09995 18.1092 4.74995 12.5 4.74995C6.87596 4.74995 3.32488 6.10631 1.79035 7.09143C1.3256 7.38979 0.706969 7.2549 0.408607 6.79015C0.110244 6.32539 0.245134 5.70676 0.70989 5.4084C2.35126 4.35468 5.45958 3.16723 10 2.83839V1C10 0.447716 10.4477 0 11 0H13.9999C14.5522 0 14.9999 0.447715 14.9999 1V2.83883Z" fill="white"/>
-                        </svg>
-                    </button>
+                <div>
+                    <span>تاریخ ثبت:</span>
+                    <strong>سه شنبه 23/04/1400 ساعت 22:20</strong>
                 </div>
-                <div class="item">
-                    <img src="imgs/singleImage.png" alt="img">
-                    <div class="info">
-                        <a href=""><h4>نام کالا در اینجا نمایش داده میشود</h4></a>
-                        <div class="details">
-                            <div class="countContainer">
-                                <label for="count">تعداد</label>
-                                <div class="count">
-                                    <button>
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5 1V5M5 9V5M5 5H9H1" stroke="#212135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </button>
-
-                                    <input type="number" name="count" id="count" value="3">
-
-                                    <button>
-                                        <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 1H9" stroke="#212135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="colorContainer">
-                                <span>رنگ</span>
-                                <div class="color" style="background-color: blue;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partPrice">
-                        <h4>قیمت کالا</h4>
-                        <strong>600,000 <sub>تومان</sub></strong>
-                    </div>
-                    <div class="totalPrice">
-                        <h4>قیمت کل</h4>
-                        <strong>1,800,000 <sub>تومان</sub></strong>
-                    </div>
-                    <button class="btn btn-danger">
-                        <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.46838 18.5327C1.54314 18.8689 1.61496 19.1941 1.68448 19.509C2.08574 21.3261 2.41028 22.7958 2.77925 24.0146C3.21041 25.4388 3.66934 26.3989 4.28235 27.0814C5.46972 28.4033 7.52752 28.9996 12.4998 28.9996C17.4721 28.9996 19.5299 28.4033 20.7173 27.0814C21.3303 26.3989 21.7892 25.4388 22.2204 24.0146C22.5894 22.7958 22.9139 21.3261 23.3152 19.5091C23.3847 19.1942 23.4565 18.8689 23.5313 18.5327C24.5092 14.1348 23.89 11.8305 22.3204 10.5167C21.4874 9.8195 20.2867 9.30573 18.6316 8.9724C16.9793 8.63963 14.9425 8.49991 12.4998 8.49991C10.0571 8.49991 8.02035 8.63963 6.36804 8.9724C4.71298 9.30573 3.51226 9.8195 2.67932 10.5167C1.10971 11.8305 0.490452 14.1348 1.46838 18.5327Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12.4999 14.9998V22.4997M7.5 14.9998V22.4997M17.4999 14.9998V22.4997" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9999 2.83883C19.5218 3.16883 22.5455 4.35797 24.2655 5.39312C24.7387 5.67792 24.8914 6.29238 24.6066 6.76558C24.3218 7.23877 23.7073 7.3915 23.2342 7.10671C21.5614 6.09995 18.1092 4.74995 12.5 4.74995C6.87596 4.74995 3.32488 6.10631 1.79035 7.09143C1.3256 7.38979 0.706969 7.2549 0.408607 6.79015C0.110244 6.32539 0.245134 5.70676 0.70989 5.4084C2.35126 4.35468 5.45958 3.16723 10 2.83839V1C10 0.447716 10.4477 0 11 0H13.9999C14.5522 0 14.9999 0.447715 14.9999 1V2.83883Z" fill="white"/>
-                        </svg>
-                    </button>
+                <div>
+                    <span>مبلغ پرداختی:</span>
+                    <strong>11,500,000 <sub>تومان</sub></strong>
                 </div>
-                <div class="item">
-                    <img src="imgs/singleImage.png" alt="img">
-                    <div class="info">
-                        <a href=""><h4>نام کالا در اینجا نمایش داده میشود</h4></a>
-                        <div class="details">
-                            <div class="countContainer">
-                                <label for="count">تعداد</label>
-                                <div class="count">
-                                    <button>
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5 1V5M5 9V5M5 5H9H1" stroke="#212135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </button>
-
-                                    <input type="number" name="count" id="count" value="3">
-
-                                    <button>
-                                        <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 1H9" stroke="#212135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="colorContainer">
-                                <span>رنگ</span>
-                                <div class="color" style="background-color: blue;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partPrice">
-                        <h4>قیمت کالا</h4>
-                        <strong>600,000 <sub>تومان</sub></strong>
-                    </div>
-                    <div class="totalPrice">
-                        <h4>قیمت کل</h4>
-                        <strong>1,800,000 <sub>تومان</sub></strong>
-                    </div>
-                    <button class="btn btn-danger">
-                        <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.46838 18.5327C1.54314 18.8689 1.61496 19.1941 1.68448 19.509C2.08574 21.3261 2.41028 22.7958 2.77925 24.0146C3.21041 25.4388 3.66934 26.3989 4.28235 27.0814C5.46972 28.4033 7.52752 28.9996 12.4998 28.9996C17.4721 28.9996 19.5299 28.4033 20.7173 27.0814C21.3303 26.3989 21.7892 25.4388 22.2204 24.0146C22.5894 22.7958 22.9139 21.3261 23.3152 19.5091C23.3847 19.1942 23.4565 18.8689 23.5313 18.5327C24.5092 14.1348 23.89 11.8305 22.3204 10.5167C21.4874 9.8195 20.2867 9.30573 18.6316 8.9724C16.9793 8.63963 14.9425 8.49991 12.4998 8.49991C10.0571 8.49991 8.02035 8.63963 6.36804 8.9724C4.71298 9.30573 3.51226 9.8195 2.67932 10.5167C1.10971 11.8305 0.490452 14.1348 1.46838 18.5327Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12.4999 14.9998V22.4997M7.5 14.9998V22.4997M17.4999 14.9998V22.4997" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9999 2.83883C19.5218 3.16883 22.5455 4.35797 24.2655 5.39312C24.7387 5.67792 24.8914 6.29238 24.6066 6.76558C24.3218 7.23877 23.7073 7.3915 23.2342 7.10671C21.5614 6.09995 18.1092 4.74995 12.5 4.74995C6.87596 4.74995 3.32488 6.10631 1.79035 7.09143C1.3256 7.38979 0.706969 7.2549 0.408607 6.79015C0.110244 6.32539 0.245134 5.70676 0.70989 5.4084C2.35126 4.35468 5.45958 3.16723 10 2.83839V1C10 0.447716 10.4477 0 11 0H13.9999C14.5522 0 14.9999 0.447715 14.9999 1V2.83883Z" fill="white"/>
-                        </svg>
-                    </button>
+                <div>
+                    <span>جمع فاکتور:</span>
+                    <strong>12,000,000 <sub>تومان</sub></strong>
                 </div>
-                <div class="item">
-                    <img src="imgs/singleImage.png" alt="img">
-                    <div class="info">
-                        <a href=""><h4>نام کالا در اینجا نمایش داده میشود</h4></a>
-                        <div class="details">
-                            <div class="countContainer">
-                                <label for="count">تعداد</label>
-                                <div class="count">
-                                    <button>
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5 1V5M5 9V5M5 5H9H1" stroke="#212135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </button>
-
-                                    <input type="number" name="count" id="count" value="3">
-
-                                    <button>
-                                        <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 1H9" stroke="#212135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="colorContainer">
-                                <span>رنگ</span>
-                                <div class="color" style="background-color: blue;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partPrice">
-                        <h4>قیمت کالا</h4>
-                        <strong>600,000 <sub>تومان</sub></strong>
-                    </div>
-                    <div class="totalPrice">
-                        <h4>قیمت کل</h4>
-                        <strong>1,800,000 <sub>تومان</sub></strong>
-                    </div>
-                    <button class="btn btn-danger">
-                        <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.46838 18.5327C1.54314 18.8689 1.61496 19.1941 1.68448 19.509C2.08574 21.3261 2.41028 22.7958 2.77925 24.0146C3.21041 25.4388 3.66934 26.3989 4.28235 27.0814C5.46972 28.4033 7.52752 28.9996 12.4998 28.9996C17.4721 28.9996 19.5299 28.4033 20.7173 27.0814C21.3303 26.3989 21.7892 25.4388 22.2204 24.0146C22.5894 22.7958 22.9139 21.3261 23.3152 19.5091C23.3847 19.1942 23.4565 18.8689 23.5313 18.5327C24.5092 14.1348 23.89 11.8305 22.3204 10.5167C21.4874 9.8195 20.2867 9.30573 18.6316 8.9724C16.9793 8.63963 14.9425 8.49991 12.4998 8.49991C10.0571 8.49991 8.02035 8.63963 6.36804 8.9724C4.71298 9.30573 3.51226 9.8195 2.67932 10.5167C1.10971 11.8305 0.490452 14.1348 1.46838 18.5327Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12.4999 14.9998V22.4997M7.5 14.9998V22.4997M17.4999 14.9998V22.4997" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9999 2.83883C19.5218 3.16883 22.5455 4.35797 24.2655 5.39312C24.7387 5.67792 24.8914 6.29238 24.6066 6.76558C24.3218 7.23877 23.7073 7.3915 23.2342 7.10671C21.5614 6.09995 18.1092 4.74995 12.5 4.74995C6.87596 4.74995 3.32488 6.10631 1.79035 7.09143C1.3256 7.38979 0.706969 7.2549 0.408607 6.79015C0.110244 6.32539 0.245134 5.70676 0.70989 5.4084C2.35126 4.35468 5.45958 3.16723 10 2.83839V1C10 0.447716 10.4477 0 11 0H13.9999C14.5522 0 14.9999 0.447715 14.9999 1V2.83883Z" fill="white"/>
-                        </svg>
-                    </button>
+                <div>
+                    <span>تخفیف :</span>
+                    <strong>500,000 <sub>تومان</sub></strong>
+                </div>
+                <div>
+                    <span>هزینه پست:</span>
+                    <strong>رایگان</strong>
                 </div>
             </div>
-        </main>
-        <aside class="col">
-            <div>
-                <span>تعداد کالا ها:</span>
-                <strong>5 عدد</strong>
+            <div class="sendDetails">
+                <h4>مشخصات ارسال</h4>
+                <div>
+                    <span> تحویل گیرنده:</span>
+                    <strong>سجاد میرشبی</strong>
+                </div>
+                <div>
+                    <span>شماره ملی:</span>
+                    <strong>0690123456</strong>
+                </div>
+                <div>
+                    <span>تلفن تماس:</span>
+                    <strong>09151234567</strong>
+                </div>
+                <div class="address">
+                    <span>آدرس تحویل:</span>
+                    <strong>تربت حیدریه، خیابان پروین، بن بست بعد از پروین 4، پلاک 20، واحد 1</strong>
+                </div>
+                <div>
+                    <span>نحوه پست:</span>
+                    <strong>عادی</strong>
+                </div>
             </div>
-            <div>
-                <span>جمع کل:</span>
-                <strong>2,520,000 <sub>تومان</sub></strong>
+            <div class="factorItems">
+                <h4>جزئیات فاکتور</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                ردیف
+                            </th>
+                            <th>
+                                نام کالا
+                            </th>
+                            <th>
+                                تعداد
+                            </th>
+                            <th>
+                                قیمت کالا
+                            </th>
+                            <th>
+                                قیمت کل
+                            </th>
+                            <th>
+                                تخفیف
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                نام کالا در این قسمت نمایش داده میشود
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                120,000
+                            </td>
+                            <td>
+                                120,000
+                            </td>
+                            <td>
+                                20,000  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                نام کالا در این قسمت نمایش داده میشود
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                120,000
+                            </td>
+                            <td>
+                                120,000
+                            </td>
+                            <td>
+                                20,000  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                نام کالا در این قسمت نمایش داده میشود
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                120,000
+                            </td>
+                            <td>
+                                120,000
+                            </td>
+                            <td>
+                                20,000  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                4
+                            </td>
+                            <td>
+                                نام کالا در این قسمت نمایش داده میشود
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                120,000
+                            </td>
+                            <td>
+                                120,000
+                            </td>
+                            <td>
+                                20,000  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                5
+                            </td>
+                            <td>
+                                نام کالا در این قسمت نمایش داده میشود
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                120,000
+                            </td>
+                            <td>
+                                120,000
+                            </td>
+                            <td>
+                                20,000  
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> جمع کل: <strong>600,000 <sub>تومان</sub></strong></td>
+                            <td> جمع تخفیف: <strong>100,000 <sub>تومان</sub></strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
-            <div>
-                <span>
-                    تخفیف: 
-                    <small>
-                        تخفیف اعمال شده حاصل جمع تخفیف های محصولات و کد تخفیف وارد شده است
-                    </small>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 6C11.062 6 10.285 6.3617 9.75259 6.96064C9.23656 7.54117 9 8.28693 9 9C9 10.254 9.73406 11.1201 10.2114 11.6833L10.2369 11.7134C10.8008 12.3793 11 12.6599 11 13C11 13.5523 11.4477 14 12 14C12.5523 14 13 13.5523 13 13C13 11.8664 12.2959 11.0438 11.8487 10.5211C11.8189 10.4864 11.7903 10.4529 11.7631 10.4208C11.2392 9.80231 11 9.45141 11 9C11 8.71307 11.0968 8.45883 11.2474 8.28936C11.3817 8.1383 11.6047 8 12 8C12.3953 8 12.6183 8.1383 12.7526 8.28936C12.9032 8.45883 13 8.71307 13 9C13 9.55228 13.4477 10 14 10C14.5523 10 15 9.55228 15 9C15 8.28693 14.7634 7.54117 14.2474 6.96064C13.715 6.3617 12.938 6 12 6ZM12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15Z" fill="#212135"/>
-                        <path d="M1 12C1 14.4477 1.13246 16.3463 1.46153 17.827C1.78807 19.2963 2.29478 20.2921 3.00136 20.9986C3.70794 21.7052 4.70365 22.2119 6.17298 22.5385C7.65366 22.8675 9.55232 23 12 23C14.4477 23 16.3463 22.8675 17.827 22.5385C19.2963 22.2119 20.2921 21.7052 20.9986 20.9986C21.7052 20.2921 22.2119 19.2963 22.5385 17.827C22.8675 16.3463 23 14.4477 23 12C23 9.55232 22.8675 7.65366 22.5385 6.17298C22.2119 4.70365 21.7052 3.70794 20.9986 3.00136C20.2921 2.29478 19.2963 1.78807 17.827 1.46153C16.3463 1.13246 14.4477 1 12 1C9.55232 1 7.65366 1.13246 6.17298 1.46153C4.70365 1.78807 3.70794 2.29478 3.00136 3.00136C2.29478 3.70794 1.78807 4.70365 1.46153 6.17298C1.13246 7.65366 1 9.55232 1 12Z" stroke="#212135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </span>
-                <strong>0 <sub>تومان</sub></strong>
-            </div>
-            <div>
-                <span>هزینه ارسال:</span>
-                <strong>رایگان</strong>
-            </div>
-            <div>
-                <span>مبلغ قابل پرداخت:</span>
-                <strong>2,520,000 <sub>تومان</sub></strong>
-            </div>
-            <a href="sendInfo.html" class="btn btn-primary">مرحله بعد</a>
-        </aside>
-    </div>
-    <!-- #endregion -->
 
-    <!-- #region Empty cart -->
-    <div class="empty" style="display: none;">
-        <img src="imgs/basket.png" alt="basket">
-        <h4>کالایی برای خرید انتخاب نکرده اید.</h4>
-        <form action="" method="GET" class="searchBox">
-            <input type="search" name="q" id="q" required>
-            <label for="q">جستجو</label>
-            <button type="submit">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 11.4783C1 15.8486 1.78302 18.3581 3.30283 19.8237C4.83125 21.2975 7.35021 21.9565 11.4783 21.9565C15.6063 21.9565 18.1253 21.2975 19.6537 19.8237C21.1735 18.3581 21.9565 15.8486 21.9565 11.4783C21.9565 7.10793 21.1735 4.59845 19.6537 3.13291C18.1253 1.65907 15.6063 1.00002 11.4783 1.00002C7.35021 1.00002 4.83125 1.65907 3.30283 3.13291C1.78302 4.59845 1 7.10793 1 11.4783Z" stroke="#212135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M22.9565 22.9565L20.3478 20.3478" stroke="#212135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-        </form>
-        <div>
-            <a href="" class="link">پیشنهاد های ویژه</a>
-            <a href="" class="link">پرفروش ترین ها</a>
+            <strong id="logo">LO<br>GO</strong>
         </div>
+
     </div>
+
     <!-- #endregion -->
 
+    <!-- #region footer -->
     <footer class="row bg-light">
         <section class="col row">
             <ul class="col">
@@ -603,10 +529,10 @@
                     <img src="imgs/cafebazar.png" alt="bazar">
                 </a>
             </div>
-            <form action="" class="subscribe col-12 row d-flex">
-                <label for="sub-input" class="col-9 row">
+            <form action="" class="subscribe col-12 row d-flex align-items-end">
+                <label for="sub-input" class="col-10 row">
                     <h4 class=" col-12">عضویت در خبرنامه</h4>
-                    <input type="email" class="float col-12" name="sub-input" id="sub-input" placeholder="ایمیل خود را وارد کنید">
+                    <input type="email" class="float col-12 m-0" name="sub-input" id="sub-input" placeholder="ایمیل خود را وارد کنید">
                 </label>
                 <button class="btn col" type="submit">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -619,22 +545,7 @@
             تمامی حقوق این سایت متعلق به سجاد میرشبی میباشد
         </h4>
     </footer>
+    <!-- #endregion -->
 
-<script src="js/jquery.js"></script>
-<script>
-$(function(){
-
-$(".add , .minus").click(function(){
-    var input = $(this).siblings('input');
-    var value = parseInt($(input).val());
-
-    input.val($(this).hasClass("add") ? value + 1 : value - 1);
-    if($(input).val() < 0){
-        $(input).val(0);
-    }
-})
-
-})
-</script>
 </body>
 </html>

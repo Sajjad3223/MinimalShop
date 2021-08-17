@@ -1,9 +1,10 @@
 @import 'root';
 
-.oveview{
+body > div.overview, body > div.sendFactor{
     background-color: white;
     border-radius: 1em;
     padding: 2em;
+    position: relative;
     @include shadow();
     & > .top{
         width: 100%;
@@ -47,254 +48,270 @@
         }
     }
 
-    & > main > .itemsContainer{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        margin-top: 1em;
-        max-height: 400px;
-        overflow-x: hidden;
-        overflow-y: auto;
-        @include scrollbar();
-        padding-left: 1em;
-        & > .item{
-            margin-top: 0.5em;
+    & > main{
+        & > .itemsContainer{
+            width: 100%;
             display: flex;
-            padding-bottom: 0.5em;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-
-            img{
-                width: 100px;
-                height: 100px;
-                border-radius: 1em;
-                margin-left: 1em;
-            }
-            & > div{
+            flex-direction: column;
+            margin-top: 1em;
+            max-height: 400px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            @include scrollbar();
+            padding-left: 1em;
+            & > .item{
+                margin-top: 0.5em;
                 display: flex;
-                flex-direction: column;
-                &.info{
-                    width: 40%;
-                    justify-content: space-between;
-                    a{
-                        width: 100%;
-                        color: black;
-                        text-decoration: none;
-                    }
-
-                    .details, .details > div{
-                        display: flex;
-                        align-items: center;
-                    }
-                    .details{
-                        width: 100%;
-                        .countContainer{
-                            border-left: 1px solid rgba(0, 0, 0, 0.3);
-                            margin-left: 1em;
-                            .count{
-                                display: flex;
-                                align-items: center;
-                                margin: 0 1em;
-                                input{
-                                    appearance: none;
-                                    background-color: transparent;
-                                    outline: none;
-                                    border: 3px solid $primary-color;
-                                    border-radius: 0.5em;
-                                    max-width: 40px;
-                                    text-align: center;
-                                    font-size: 14px;
-                                    padding: 0.5em 0;
+                padding-bottom: 0.5em;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     
-                                    &::-webkit-outer-spin-button,
-                                    &::-webkit-inner-spin-button {
-                                    -webkit-appearance: none;
-                                    margin: 0;
+                img{
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 1em;
+                    margin-left: 1em;
+                }
+                & > div{
+                    display: flex;
+                    flex-direction: column;
+                    &.info{
+                        width: 40%;
+                        justify-content: space-between;
+                        a{
+                            width: 100%;
+                            color: black;
+                            text-decoration: none;
+                        }
+    
+                        .details, .details > div{
+                            display: flex;
+                            align-items: center;
+                        }
+                        .details{
+                            width: 100%;
+                            .countContainer{
+                                border-left: 1px solid rgba(0, 0, 0, 0.3);
+                                margin-left: 1em;
+                                .count{
+                                    display: flex;
+                                    align-items: center;
+                                    margin: 0 1em;
+                                    input{
+                                        appearance: none;
+                                        background-color: transparent;
+                                        outline: none;
+                                        border: 3px solid $primary-color;
+                                        border-radius: 0.5em;
+                                        max-width: 40px;
+                                        text-align: center;
+                                        font-size: 14px;
+                                        padding: 0.5em 0;
+        
+                                        &::-webkit-outer-spin-button,
+                                        &::-webkit-inner-spin-button {
+                                        -webkit-appearance: none;
+                                        margin: 0;
+                                        }
+                                    }
+                                    button{
+                                        background-color: transparent;
+                                        outline: none;
+                                        border: none;
+                                        appearance: none;
+                                        cursor: pointer;
                                     }
                                 }
-                                button{
-                                    background-color: transparent;
-                                    outline: none;
-                                    border: none;
-                                    appearance: none;
-                                    cursor: pointer;
+                            }
+                            .colorContainer{
+                                display: flex;
+                                width: 50%;
+                                div.color{
+                                    margin: 0 1em;
+                                    width: 35px;
+                                    height: 35px;
+                                    border-radius: 50%;
                                 }
                             }
                         }
-                        .colorContainer{
-                            display: flex;
-                            width: 50%;
-                            div.color{
-                                margin: 0 1em;
-                                width: 35px;
-                                height: 35px;
-                                border-radius: 50%;
-                            }
+                    }
+    
+                    &.partPrice,&.totalPrice{
+                        width: 20%;
+                        justify-content: space-between;
+                        strong{
+                            margin-bottom: 1em;
                         }
                     }
+    
+                    
                 }
-
-                &.partPrice,&.totalPrice{
-                    width: 20%;
-                    justify-content: space-between;
-                    strong{
-                        margin-bottom: 1em;
+                & > button{
+                    align-self: center;
+                    display: grid;
+                    place-items: center;
+                    padding: 0;
+                    margin: 0;
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 0.5em;
+                }
+            }
+        }
+    
+        & > div{
+            width: 100%;
+            margin: 0.5em 0;
+            padding: 1em 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    
+            &:last-of-type{
+                border: none;
+            }
+        }
+    
+        &.sendInfo > div{
+            position: relative;
+            
+            &.address,&.sendMethod{
+                & > div{
+                    margin: 0.5em 1em;
+                    display: flex;
+                    align-items: center;
+                    span{
+                        font-size: 13px;
+                        margin: 0 auto;
                     }
                 }
-
-                
             }
-            & > button{
-                align-self: center;
-                display: grid;
-                place-items: center;
-                padding: 0;
-                margin: 0;
-                width: 44px;
-                height: 44px;
-                border-radius: 0.5em;
-            }
-        }
-    }
-
-    & > main > div{
-        width: 100%;
-        margin: 0.5em 0;
-        padding: 1em 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-
-        &:last-of-type{
-            border: none;
-        }
-    }
-
-    & > main.sendInfo > div{
-        position: relative;
-        
-        &.address,&.sendMethod{
-            & > div{
-                margin: 0.5em 1em;
+            &.receiver{
                 display: flex;
-                align-items: center;
-                span{
-                    font-size: 13px;
-                    margin: 0 auto;
-                }
-            }
-        }
-        &.receiver{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            h4{width: 100%; margin-bottom: 1em;}
-            padding-left: 4em;
-            div{
-                margin-right: 1em;
-            }
-        }
-        button{
-            display: flex;
-            align-items: center;
-            background-color: transparent;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            svg{margin-left: 1em; stroke: $primary-color;}
-            position: absolute;
-            top: 1em;
-            left: 2em;
-            font-weight: bolder;
-            &:hover{
-                color: $primary-hover-color;
-                svg{stroke: $primary-hover-color;}
-            }
-        }
-    }
-    & > main.payment{
-        .discount{
-            input{
-                & ~ svg{
-                    display: none;
-                }
-            }
-            input[data-applied="true"]{
-                & ~ button{
-                    display: none;
-                }
-                & ~ svg{
-                    display: block;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                h4{width: 100%; margin-bottom: 1em;}
+                padding-left: 4em;
+                div{
+                    margin-right: 1em;
                 }
             }
             button{
-                font-size: 14px;
-                padding: 0.5em 1.5em;
-                border-radius: 0.5em;
+                display: flex;
+                align-items: center;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                svg{margin-left: 1em; stroke: $primary-color;}
+                position: absolute;
+                top: 1em;
+                left: 2em;
+                font-weight: bolder;
+                &:hover{
+                    color: $primary-hover-color;
+                    svg{stroke: $primary-hover-color;}
+                }
             }
         }
-        .digits{
-            ul.itemsContainer{
-                list-style: none;
-                display: flex;
-                margin-top: 1em;
-                overflow-x: scroll;
-                flex-wrap: nowrap;
-                position: relative;
-                @include scrollbar();
-                padding-bottom: 1em;
-
-                li.item{
+        &.payment{
+            .discount{
+                input{
+                    & ~ svg{
+                        display: none;
+                    }
+                }
+                input[data-applied="true"]{
+                    & ~ button{
+                        display: none;
+                    }
+                    & ~ svg{
+                        display: block;
+                    }
+                }
+                button{
+                    font-size: 14px;
+                    padding: 0.5em 1.5em;
+                    border-radius: 0.5em;
+                }
+            }
+            .digits{
+                ul.itemsContainer{
+                    list-style: none;
                     display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    border-left: 1px solid rgba(0, 0, 0, 0.3);
-                    padding: 0 1em;
-                    &:last-of-type{
-                        border: none;
-                    }
-                    img{
-                        width: 50px;
-                        height: 50px;
-                        border-radius: 0.5em;
-                    }
-                    & > div{
+                    margin-top: 1em;
+                    overflow-x: scroll;
+                    flex-wrap: nowrap;
+                    position: relative;
+                    @include scrollbar();
+                    padding-bottom: 1em;
+    
+                    li.item{
                         display: flex;
-                        margin-top: 0.5em;
-                        span{
+                        flex-direction: column;
+                        align-items: center;
+                        border-left: 1px solid rgba(0, 0, 0, 0.3);
+                        padding: 0 1em;
+                        &:last-of-type{
+                            border: none;
+                        }
+                        img{
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 0.5em;
+                        }
+                        & > div{
                             display: flex;
-                            div{
-                                width: 25px;
-                                height: 25px;
-                                border-radius: 50%;
-                                text-align: center;
-                                margin: 0 0.4em;
-                                background-color: #DADADA;
+                            margin-top: 0.5em;
+                            span{
+                                display: flex;
+                                div{
+                                    width: 25px;
+                                    height: 25px;
+                                    border-radius: 50%;
+                                    text-align: center;
+                                    margin: 0 0.4em;
+                                    background-color: #DADADA;
+                                }
                             }
                         }
+                        
+    
                     }
-                    
-
+                }
+            }
+        }
+        
+    
+        & > a{
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            transition: color 0.3s;
+            svg{
+                margin: 0 0.5em;
+                stroke: $primary-color;
+                transition: transform 0.3s,stroke 0.3s;
+            }
+            &:hover{
+                color: $primary-hover-color;
+                svg{
+                    stroke: $primary-hover-color;
+                    transform: translateX(5px);
                 }
             }
         }
     }
-    
 
-    & > main > a{
+    & > button#printFactor{
+        position: absolute;
         width: fit-content;
+        top: 2em;
+        left: 2em;
         display: flex;
         align-items: center;
-        font-weight: bold;
-        transition: color 0.3s;
+        padding: 1em;
+        border-radius: 0.5em;
         svg{
-            margin: 0 0.5em;
-            stroke: $primary-color;
-            transition: transform 0.3s,stroke 0.3s;
-        }
-        &:hover{
-            color: $primary-hover-color;
-            svg{
-                stroke: $primary-hover-color;
-                transform: translateX(5px);
-            }
+            margin-right: 0.5em;
         }
     }
 
@@ -356,6 +373,95 @@
         a{
             margin: 0;
             border-radius: 0.5em;
+        }
+    }
+
+    & > .factor{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 3em;
+        & > div{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 1em;
+            padding-bottom: 1em;
+            margin-bottom: 1em;
+            border-bottom: 3px dashed rgba(0, 0, 0, 0.3);
+            &:last-of-type{
+                border: none;
+            }
+            h4{
+                text-align: center;
+                grid-column: span 3;
+                padding-bottom: 0.5em;
+                width: fit-content;
+                place-self: center;
+                position: relative;
+                &::before,&::after{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    width: 4.5em;
+                    height: 0.2em;
+                    background-color: rgba(0, 0, 0, 0.2);
+                    border-radius: 1em;
+                    top: 35%;
+                }
+                &::before{
+                    left: -100%;
+                }
+
+                &::after{
+                    right: -100%;
+                }
+            }
+            & > div{
+                display: flex;
+                align-items: center;
+                span{
+                    min-width: 20%;
+                }
+                strong{
+                    min-width: 60%;
+                    text-align: center;
+                }
+                &.address{
+                    grid-column: span 2;
+                    strong{
+                        text-align: right;
+                    }
+                }
+            }
+            &.factorItems{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                table{
+                    text-align: center;
+                    th{
+                        padding-bottom: 1em;
+                        border-bottom: 1px solid #000;
+                    }
+                    td{
+                        height: 3em;
+                    }
+                    tfoot{
+                        td{
+                            border-top: 1px solid #000;
+                        }
+                    }
+                }
+            }
+        }
+
+        & #logo{
+            margin-left: 5%;
+            font-size: 40px;
+            font-weight: 900;
+            text-align: left;
+            line-height: 40px;
         }
     }
 }

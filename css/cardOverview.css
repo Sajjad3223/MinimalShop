@@ -1,23 +1,24 @@
-.oveview {
+body > div.overview, body > div.sendFactor {
   background-color: white;
   border-radius: 1em;
   padding: 2em;
+  position: relative;
   -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-.oveview > .top {
+body > div.overview > .top, body > div.sendFactor > .top {
   width: 100%;
 }
 
-.oveview > .top div.levels {
+body > div.overview > .top div.levels, body > div.sendFactor > .top div.levels {
   width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.oveview > .top div.levels span {
+body > div.overview > .top div.levels span, body > div.sendFactor > .top div.levels span {
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -31,20 +32,20 @@
   position: relative;
 }
 
-.oveview > .top div.levels span.passed {
+body > div.overview > .top div.levels span.passed, body > div.sendFactor > .top div.levels span.passed {
   background-color: #0055FF;
   color: #fff;
 }
 
-.oveview > .top div.levels span.passed::before {
+body > div.overview > .top div.levels span.passed::before, body > div.sendFactor > .top div.levels span.passed::before {
   background-color: #0055FF;
 }
 
-.oveview > .top div.levels span:first-child::before {
+body > div.overview > .top div.levels span:first-child::before, body > div.sendFactor > .top div.levels span:first-child::before {
   display: none;
 }
 
-.oveview > .top div.levels span::before {
+body > div.overview > .top div.levels span::before, body > div.sendFactor > .top div.levels span::before {
   position: absolute;
   content: "";
   width: 1em;
@@ -56,7 +57,7 @@
   background-color: #85FFE9;
 }
 
-.oveview > main > .itemsContainer {
+body > div.overview > main > .itemsContainer, body > div.sendFactor > main > .itemsContainer {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,26 +77,26 @@
   padding-left: 1em;
 }
 
-.oveview > main > .itemsContainer::-webkit-scrollbar {
+body > div.overview > main > .itemsContainer::-webkit-scrollbar, body > div.sendFactor > main > .itemsContainer::-webkit-scrollbar {
   width: 10px;
 }
 
-.oveview > main > .itemsContainer::-webkit-scrollbar-track {
+body > div.overview > main > .itemsContainer::-webkit-scrollbar-track, body > div.sendFactor > main > .itemsContainer::-webkit-scrollbar-track {
   background: #C4C4C4;
   border-radius: 0.5em;
 }
 
-.oveview > main > .itemsContainer::-webkit-scrollbar-thumb {
+body > div.overview > main > .itemsContainer::-webkit-scrollbar-thumb, body > div.sendFactor > main > .itemsContainer::-webkit-scrollbar-thumb {
   background: #F4F4F4;
   border-radius: 0.5em;
   border: 3px #C4C4C4 solid;
 }
 
-.oveview > main > .itemsContainer::-webkit-scrollbar-thumb:hover {
+body > div.overview > main > .itemsContainer::-webkit-scrollbar-thumb:hover, body > div.sendFactor > main > .itemsContainer::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
-.oveview > main > .itemsContainer > .item {
+body > div.overview > main > .itemsContainer > .item, body > div.sendFactor > main > .itemsContainer > .item {
   margin-top: 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -104,14 +105,14 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.oveview > main > .itemsContainer > .item img {
+body > div.overview > main > .itemsContainer > .item img, body > div.sendFactor > main > .itemsContainer > .item img {
   width: 100px;
   height: 100px;
   border-radius: 1em;
   margin-left: 1em;
 }
 
-.oveview > main > .itemsContainer > .item > div {
+body > div.overview > main > .itemsContainer > .item > div, body > div.sendFactor > main > .itemsContainer > .item > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,20 +122,20 @@
           flex-direction: column;
 }
 
-.oveview > main > .itemsContainer > .item > div.info {
+body > div.overview > main > .itemsContainer > .item > div.info, body > div.sendFactor > main > .itemsContainer > .item > div.info {
   width: 40%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.oveview > main > .itemsContainer > .item > div.info a {
+body > div.overview > main > .itemsContainer > .item > div.info a, body > div.sendFactor > main > .itemsContainer > .item > div.info a {
   width: 100%;
   color: black;
   text-decoration: none;
 }
 
-.oveview > main > .itemsContainer > .item > div.info .details, .oveview > main > .itemsContainer > .item > div.info .details > div {
+body > div.overview > main > .itemsContainer > .item > div.info .details, body > div.overview > main > .itemsContainer > .item > div.info .details > div, body > div.sendFactor > main > .itemsContainer > .item > div.info .details, body > div.sendFactor > main > .itemsContainer > .item > div.info .details > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,16 +144,16 @@
           align-items: center;
 }
 
-.oveview > main > .itemsContainer > .item > div.info .details {
+body > div.overview > main > .itemsContainer > .item > div.info .details, body > div.sendFactor > main > .itemsContainer > .item > div.info .details {
   width: 100%;
 }
 
-.oveview > main > .itemsContainer > .item > div.info .details .countContainer {
+body > div.overview > main > .itemsContainer > .item > div.info .details .countContainer, body > div.sendFactor > main > .itemsContainer > .item > div.info .details .countContainer {
   border-left: 1px solid rgba(0, 0, 0, 0.3);
   margin-left: 1em;
 }
 
-.oveview > main > .itemsContainer > .item > div.info .details .countContainer .count {
+body > div.overview > main > .itemsContainer > .item > div.info .details .countContainer .count, body > div.sendFactor > main > .itemsContainer > .item > div.info .details .countContainer .count {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,7 +163,7 @@
   margin: 0 1em;
 }
 
-.oveview > main > .itemsContainer > .item > div.info .details .countContainer .count input {
+body > div.overview > main > .itemsContainer > .item > div.info .details .countContainer .count input, body > div.sendFactor > main > .itemsContainer > .item > div.info .details .countContainer .count input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -176,12 +177,12 @@
   padding: 0.5em 0;
 }
 
-.oveview > main > .itemsContainer > .item > div.info .details .countContainer .count input::-webkit-outer-spin-button, .oveview > main > .itemsContainer > .item > div.info .details .countContainer .count input::-webkit-inner-spin-button {
+body > div.overview > main > .itemsContainer > .item > div.info .details .countContainer .count input::-webkit-outer-spin-button, body > div.overview > main > .itemsContainer > .item > div.info .details .countContainer .count input::-webkit-inner-spin-button, body > div.sendFactor > main > .itemsContainer > .item > div.info .details .countContainer .count input::-webkit-outer-spin-button, body > div.sendFactor > main > .itemsContainer > .item > div.info .details .countContainer .count input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.oveview > main > .itemsContainer > .item > div.info .details .countContainer .count button {
+body > div.overview > main > .itemsContainer > .item > div.info .details .countContainer .count button, body > div.sendFactor > main > .itemsContainer > .item > div.info .details .countContainer .count button {
   background-color: transparent;
   outline: none;
   border: none;
@@ -191,32 +192,32 @@
   cursor: pointer;
 }
 
-.oveview > main > .itemsContainer > .item > div.info .details .colorContainer {
+body > div.overview > main > .itemsContainer > .item > div.info .details .colorContainer, body > div.sendFactor > main > .itemsContainer > .item > div.info .details .colorContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 50%;
 }
 
-.oveview > main > .itemsContainer > .item > div.info .details .colorContainer div.color {
+body > div.overview > main > .itemsContainer > .item > div.info .details .colorContainer div.color, body > div.sendFactor > main > .itemsContainer > .item > div.info .details .colorContainer div.color {
   margin: 0 1em;
   width: 35px;
   height: 35px;
   border-radius: 50%;
 }
 
-.oveview > main > .itemsContainer > .item > div.partPrice, .oveview > main > .itemsContainer > .item > div.totalPrice {
+body > div.overview > main > .itemsContainer > .item > div.partPrice, body > div.overview > main > .itemsContainer > .item > div.totalPrice, body > div.sendFactor > main > .itemsContainer > .item > div.partPrice, body > div.sendFactor > main > .itemsContainer > .item > div.totalPrice {
   width: 20%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.oveview > main > .itemsContainer > .item > div.partPrice strong, .oveview > main > .itemsContainer > .item > div.totalPrice strong {
+body > div.overview > main > .itemsContainer > .item > div.partPrice strong, body > div.overview > main > .itemsContainer > .item > div.totalPrice strong, body > div.sendFactor > main > .itemsContainer > .item > div.partPrice strong, body > div.sendFactor > main > .itemsContainer > .item > div.totalPrice strong {
   margin-bottom: 1em;
 }
 
-.oveview > main > .itemsContainer > .item > button {
+body > div.overview > main > .itemsContainer > .item > button, body > div.sendFactor > main > .itemsContainer > .item > button {
   -ms-grid-row-align: center;
       align-self: center;
   display: -ms-grid;
@@ -229,22 +230,22 @@
   border-radius: 0.5em;
 }
 
-.oveview > main > div {
+body > div.overview > main > div, body > div.sendFactor > main > div {
   width: 100%;
   margin: 0.5em 0;
   padding: 1em 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.oveview > main > div:last-of-type {
+body > div.overview > main > div:last-of-type, body > div.sendFactor > main > div:last-of-type {
   border: none;
 }
 
-.oveview > main.sendInfo > div {
+body > div.overview > main.sendInfo > div, body > div.sendFactor > main.sendInfo > div {
   position: relative;
 }
 
-.oveview > main.sendInfo > div.address > div, .oveview > main.sendInfo > div.sendMethod > div {
+body > div.overview > main.sendInfo > div.address > div, body > div.overview > main.sendInfo > div.sendMethod > div, body > div.sendFactor > main.sendInfo > div.address > div, body > div.sendFactor > main.sendInfo > div.sendMethod > div {
   margin: 0.5em 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -254,12 +255,12 @@
           align-items: center;
 }
 
-.oveview > main.sendInfo > div.address > div span, .oveview > main.sendInfo > div.sendMethod > div span {
+body > div.overview > main.sendInfo > div.address > div span, body > div.overview > main.sendInfo > div.sendMethod > div span, body > div.sendFactor > main.sendInfo > div.address > div span, body > div.sendFactor > main.sendInfo > div.sendMethod > div span {
   font-size: 13px;
   margin: 0 auto;
 }
 
-.oveview > main.sendInfo > div.receiver {
+body > div.overview > main.sendInfo > div.receiver, body > div.sendFactor > main.sendInfo > div.receiver {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -271,16 +272,16 @@
   padding-left: 4em;
 }
 
-.oveview > main.sendInfo > div.receiver h4 {
+body > div.overview > main.sendInfo > div.receiver h4, body > div.sendFactor > main.sendInfo > div.receiver h4 {
   width: 100%;
   margin-bottom: 1em;
 }
 
-.oveview > main.sendInfo > div.receiver div {
+body > div.overview > main.sendInfo > div.receiver div, body > div.sendFactor > main.sendInfo > div.receiver div {
   margin-right: 1em;
 }
 
-.oveview > main.sendInfo > div button {
+body > div.overview > main.sendInfo > div button, body > div.sendFactor > main.sendInfo > div button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,38 +298,38 @@
   font-weight: bolder;
 }
 
-.oveview > main.sendInfo > div button svg {
+body > div.overview > main.sendInfo > div button svg, body > div.sendFactor > main.sendInfo > div button svg {
   margin-left: 1em;
   stroke: #0055FF;
 }
 
-.oveview > main.sendInfo > div button:hover {
+body > div.overview > main.sendInfo > div button:hover, body > div.sendFactor > main.sendInfo > div button:hover {
   color: #0047D6;
 }
 
-.oveview > main.sendInfo > div button:hover svg {
+body > div.overview > main.sendInfo > div button:hover svg, body > div.sendFactor > main.sendInfo > div button:hover svg {
   stroke: #0047D6;
 }
 
-.oveview > main.payment .discount input ~ svg {
+body > div.overview > main.payment .discount input ~ svg, body > div.sendFactor > main.payment .discount input ~ svg {
   display: none;
 }
 
-.oveview > main.payment .discount input[data-applied="true"] ~ button {
+body > div.overview > main.payment .discount input[data-applied="true"] ~ button, body > div.sendFactor > main.payment .discount input[data-applied="true"] ~ button {
   display: none;
 }
 
-.oveview > main.payment .discount input[data-applied="true"] ~ svg {
+body > div.overview > main.payment .discount input[data-applied="true"] ~ svg, body > div.sendFactor > main.payment .discount input[data-applied="true"] ~ svg {
   display: block;
 }
 
-.oveview > main.payment .discount button {
+body > div.overview > main.payment .discount button, body > div.sendFactor > main.payment .discount button {
   font-size: 14px;
   padding: 0.5em 1.5em;
   border-radius: 0.5em;
 }
 
-.oveview > main.payment .digits ul.itemsContainer {
+body > div.overview > main.payment .digits ul.itemsContainer, body > div.sendFactor > main.payment .digits ul.itemsContainer {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -345,26 +346,26 @@
   padding-bottom: 1em;
 }
 
-.oveview > main.payment .digits ul.itemsContainer::-webkit-scrollbar {
+body > div.overview > main.payment .digits ul.itemsContainer::-webkit-scrollbar, body > div.sendFactor > main.payment .digits ul.itemsContainer::-webkit-scrollbar {
   width: 10px;
 }
 
-.oveview > main.payment .digits ul.itemsContainer::-webkit-scrollbar-track {
+body > div.overview > main.payment .digits ul.itemsContainer::-webkit-scrollbar-track, body > div.sendFactor > main.payment .digits ul.itemsContainer::-webkit-scrollbar-track {
   background: #C4C4C4;
   border-radius: 0.5em;
 }
 
-.oveview > main.payment .digits ul.itemsContainer::-webkit-scrollbar-thumb {
+body > div.overview > main.payment .digits ul.itemsContainer::-webkit-scrollbar-thumb, body > div.sendFactor > main.payment .digits ul.itemsContainer::-webkit-scrollbar-thumb {
   background: #F4F4F4;
   border-radius: 0.5em;
   border: 3px #C4C4C4 solid;
 }
 
-.oveview > main.payment .digits ul.itemsContainer::-webkit-scrollbar-thumb:hover {
+body > div.overview > main.payment .digits ul.itemsContainer::-webkit-scrollbar-thumb:hover, body > div.sendFactor > main.payment .digits ul.itemsContainer::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
-.oveview > main.payment .digits ul.itemsContainer li.item {
+body > div.overview > main.payment .digits ul.itemsContainer li.item, body > div.sendFactor > main.payment .digits ul.itemsContainer li.item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -379,30 +380,30 @@
   padding: 0 1em;
 }
 
-.oveview > main.payment .digits ul.itemsContainer li.item:last-of-type {
+body > div.overview > main.payment .digits ul.itemsContainer li.item:last-of-type, body > div.sendFactor > main.payment .digits ul.itemsContainer li.item:last-of-type {
   border: none;
 }
 
-.oveview > main.payment .digits ul.itemsContainer li.item img {
+body > div.overview > main.payment .digits ul.itemsContainer li.item img, body > div.sendFactor > main.payment .digits ul.itemsContainer li.item img {
   width: 50px;
   height: 50px;
   border-radius: 0.5em;
 }
 
-.oveview > main.payment .digits ul.itemsContainer li.item > div {
+body > div.overview > main.payment .digits ul.itemsContainer li.item > div, body > div.sendFactor > main.payment .digits ul.itemsContainer li.item > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 0.5em;
 }
 
-.oveview > main.payment .digits ul.itemsContainer li.item > div span {
+body > div.overview > main.payment .digits ul.itemsContainer li.item > div span, body > div.sendFactor > main.payment .digits ul.itemsContainer li.item > div span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.oveview > main.payment .digits ul.itemsContainer li.item > div span div {
+body > div.overview > main.payment .digits ul.itemsContainer li.item > div span div, body > div.sendFactor > main.payment .digits ul.itemsContainer li.item > div span div {
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -411,7 +412,7 @@
   background-color: #DADADA;
 }
 
-.oveview > main > a {
+body > div.overview > main > a, body > div.sendFactor > main > a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -426,7 +427,7 @@
   transition: color 0.3s;
 }
 
-.oveview > main > a svg {
+body > div.overview > main > a svg, body > div.sendFactor > main > a svg {
   margin: 0 0.5em;
   stroke: #0055FF;
   -webkit-transition: stroke 0.3s,-webkit-transform 0.3s;
@@ -435,17 +436,38 @@
   transition: transform 0.3s,stroke 0.3s,-webkit-transform 0.3s;
 }
 
-.oveview > main > a:hover {
+body > div.overview > main > a:hover, body > div.sendFactor > main > a:hover {
   color: #0047D6;
 }
 
-.oveview > main > a:hover svg {
+body > div.overview > main > a:hover svg, body > div.sendFactor > main > a:hover svg {
   stroke: #0047D6;
   -webkit-transform: translateX(5px);
           transform: translateX(5px);
 }
 
-.oveview aside {
+body > div.overview > button#printFactor, body > div.sendFactor > button#printFactor {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: 2em;
+  left: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+
+body > div.overview > button#printFactor svg, body > div.sendFactor > button#printFactor svg {
+  margin-right: 0.5em;
+}
+
+body > div.overview aside, body > div.sendFactor aside {
   position: -webkit-sticky;
   position: sticky;
   top: 2em;
@@ -465,7 +487,7 @@
   max-height: 30em;
 }
 
-.oveview aside > div {
+body > div.overview aside > div, body > div.sendFactor aside > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -477,11 +499,11 @@
   margin: 0.5em 0;
 }
 
-.oveview aside > div:last-of-type {
+body > div.overview aside > div:last-of-type, body > div.sendFactor aside > div:last-of-type {
   border: none;
 }
 
-.oveview aside > div span {
+body > div.overview aside > div span, body > div.sendFactor aside > div span {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -494,11 +516,11 @@
   position: relative;
 }
 
-.oveview aside > div span:hover small {
+body > div.overview aside > div span:hover small, body > div.sendFactor aside > div span:hover small {
   opacity: 1;
 }
 
-.oveview aside > div span small {
+body > div.overview aside > div span small, body > div.sendFactor aside > div span small {
   position: absolute;
   top: 0;
   left: 0;
@@ -516,25 +538,146 @@
   transition: opacity 0.3s;
 }
 
-.oveview aside > div span svg {
+body > div.overview aside > div span svg, body > div.sendFactor aside > div span svg {
   margin-right: 0.5em;
 }
 
-.oveview aside > div > small.discount {
+body > div.overview aside > div > small.discount, body > div.sendFactor aside > div > small.discount {
   margin-right: auto;
   margin-left: 3em;
   font-weight: bold;
   color: #FF2F2F;
 }
 
-.oveview aside > div strong {
+body > div.overview aside > div strong, body > div.sendFactor aside > div strong {
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
 
-.oveview aside a {
+body > div.overview aside a, body > div.sendFactor aside a {
   margin: 0;
   border-radius: 0.5em;
+}
+
+body > div.overview > .factor, body > div.sendFactor > .factor {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3em;
+}
+
+body > div.overview > .factor > div, body > div.sendFactor > .factor > div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 3px dashed rgba(0, 0, 0, 0.3);
+}
+
+body > div.overview > .factor > div:last-of-type, body > div.sendFactor > .factor > div:last-of-type {
+  border: none;
+}
+
+body > div.overview > .factor > div h4, body > div.sendFactor > .factor > div h4 {
+  text-align: center;
+  grid-column: span 3;
+  padding-bottom: 0.5em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  place-self: center;
+  position: relative;
+}
+
+body > div.overview > .factor > div h4::before, body > div.overview > .factor > div h4::after, body > div.sendFactor > .factor > div h4::before, body > div.sendFactor > .factor > div h4::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 4.5em;
+  height: 0.2em;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 1em;
+  top: 35%;
+}
+
+body > div.overview > .factor > div h4::before, body > div.sendFactor > .factor > div h4::before {
+  left: -100%;
+}
+
+body > div.overview > .factor > div h4::after, body > div.sendFactor > .factor > div h4::after {
+  right: -100%;
+}
+
+body > div.overview > .factor > div > div, body > div.sendFactor > .factor > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body > div.overview > .factor > div > div span, body > div.sendFactor > .factor > div > div span {
+  min-width: 20%;
+}
+
+body > div.overview > .factor > div > div strong, body > div.sendFactor > .factor > div > div strong {
+  min-width: 60%;
+  text-align: center;
+}
+
+body > div.overview > .factor > div > div.address, body > div.sendFactor > .factor > div > div.address {
+  grid-column: span 2;
+}
+
+body > div.overview > .factor > div > div.address strong, body > div.sendFactor > .factor > div > div.address strong {
+  text-align: right;
+}
+
+body > div.overview > .factor > div.factorItems, body > div.sendFactor > .factor > div.factorItems {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body > div.overview > .factor > div.factorItems table, body > div.sendFactor > .factor > div.factorItems table {
+  text-align: center;
+}
+
+body > div.overview > .factor > div.factorItems table th, body > div.sendFactor > .factor > div.factorItems table th {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #000;
+}
+
+body > div.overview > .factor > div.factorItems table td, body > div.sendFactor > .factor > div.factorItems table td {
+  height: 3em;
+}
+
+body > div.overview > .factor > div.factorItems table tfoot td, body > div.sendFactor > .factor > div.factorItems table tfoot td {
+  border-top: 1px solid #000;
+}
+
+body > div.overview > .factor #logo, body > div.sendFactor > .factor #logo {
+  margin-left: 5%;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: left;
+  line-height: 40px;
 }
 
 .modal {
