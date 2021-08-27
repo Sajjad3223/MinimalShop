@@ -290,7 +290,7 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 1em;
 }
 
-input[type=checkbox]:not(input.toggle) {
+input[type=checkbox]:not(.toggle) {
   position: relative;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -302,7 +302,7 @@ input[type=checkbox]:not(input.toggle) {
   margin: 0 1em;
 }
 
-input[type=checkbox]:not(input.toggle)::before, input[type=checkbox]:not(input.toggle)::after {
+input[type=checkbox]:not(.toggle)::before, input[type=checkbox]:not(.toggle)::after {
   content: "";
   display: block;
   background-size: cover;
@@ -318,20 +318,20 @@ input[type=checkbox]:not(input.toggle)::before, input[type=checkbox]:not(input.t
   transition: opacity 0.5s;
 }
 
-input[type=checkbox]:not(input.toggle)::before {
+input[type=checkbox]:not(.toggle)::before {
   background-image: url("../imgs/Unckecked.svg");
 }
 
-input[type=checkbox]:not(input.toggle)::after {
+input[type=checkbox]:not(.toggle)::after {
   background-image: url("../imgs/Checked.svg");
   opacity: 0;
 }
 
-input[type=checkbox]:not(input.toggle):checked::before {
+input[type=checkbox]:not(.toggle):checked::before {
   opacity: 0;
 }
 
-input[type=checkbox]:not(input.toggle):checked::after {
+input[type=checkbox]:not(.toggle):checked::after {
   opacity: 1;
 }
 

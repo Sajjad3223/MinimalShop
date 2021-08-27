@@ -590,6 +590,7 @@ hr {
   margin: 0.5em;
   position: relative;
   overflow: hidden;
+  padding: 0;
 }
 
 .cards-container .card:hover .content .bookmark {

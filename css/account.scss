@@ -3,36 +3,57 @@
 .account{
     position: relative;
     width: 60vw;
-    height: 350px;
+    height: 370px;
     margin:2em auto ;
     background-color: #FFF;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 2em;
+    padding: 0 2em;
     border-radius: 2em;
     overflow: hidden;
-    .changeForm{
+    input.changeForm{
         position: absolute;
         right: 0;
         bottom: 0;
         padding: 2em;
+        margin: 0;
+        width: 14em;
+        height: 5em;
         border-radius: 2em 0 2em 0;
         text-decoration: none;
         cursor: pointer;
         appearance: none;
-        background-color: #00CC88;
+        background-color: $success-color;
         color: white;
         z-index: 10;
         transition: background-color 0.3s;
         &:hover{
-            background-color: #00BA7C;
+            background-color: $success-hover-color;
+        }
+        &::before{
+            display: none;
+            top: 0;
         }
         &::after{
+            background-image: none;
             content: 'ایجاد حساب کاربری';
+            color: white;
+            z-index: 5;
+            opacity: 1;
+            position: relative;
+            pointer-events: none;
+            text-align: center;
+            top: 0;
+            left: 0;
+            display: block;
+            height: auto;
+            width: auto;
+            transform: none;
+            font-size: 1em;
         }
         &:checked{
-            background-color: #99BBFF;
+            background-color: $primary-color;
             &:hover{
-                background-color: #6292F2;
+                background-color: $primary-hover-color;
             }
             &::after{
                 content: 'ورود به حساب کاربری';

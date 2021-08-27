@@ -2,72 +2,95 @@
 .account {
   position: relative;
   width: 60vw;
-  height: 350px;
+  height: 370px;
   margin: 2em auto;
   background-color: #FFF;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  padding: 2em;
+  padding: 0 2em;
   border-radius: 2em;
   overflow: hidden;
 }
 
-.account .changeForm {
+.account input.changeForm {
   position: absolute;
   right: 0;
   bottom: 0;
   padding: 2em;
+  margin: 0;
+  width: 14em;
+  height: 5em;
   border-radius: 2em 0 2em 0;
   text-decoration: none;
   cursor: pointer;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-color: #00CC88;
+  background-color: #00B277;
   color: white;
   z-index: 10;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 
-.account .changeForm:hover {
-  background-color: #00BA7C;
+.account input.changeForm:hover {
+  background-color: #009563;
 }
 
-.account .changeForm::after {
+.account input.changeForm::before {
+  display: none;
+  top: 0;
+}
+
+.account input.changeForm::after {
+  background-image: none;
   content: 'ایجاد حساب کاربری';
+  color: white;
+  z-index: 5;
+  opacity: 1;
+  position: relative;
+  pointer-events: none;
+  text-align: center;
+  top: 0;
+  left: 0;
+  display: block;
+  height: auto;
+  width: auto;
+  -webkit-transform: none;
+          transform: none;
+  font-size: 1em;
 }
 
-.account .changeForm:checked {
-  background-color: #99BBFF;
+.account input.changeForm:checked {
+  background-color: #0055FF;
 }
 
-.account .changeForm:checked:hover {
-  background-color: #6292F2;
+.account input.changeForm:checked:hover {
+  background-color: #0047D6;
 }
 
-.account .changeForm:checked::after {
+.account input.changeForm:checked::after {
   content: 'ورود به حساب کاربری';
 }
 
-.account .changeForm ~ form.login {
+.account input.changeForm ~ form.login {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-.account .changeForm ~ form.signup {
+.account input.changeForm ~ form.signup {
   -webkit-transform: translate(100%, -50%) skewX(-60deg);
           transform: translate(100%, -50%) skewX(-60deg);
   visibility: hidden;
 }
 
-.account .changeForm:checked ~ form.login {
+.account input.changeForm:checked ~ form.login {
   -webkit-transform: translate(-200%, -50%) skewX(60deg);
           transform: translate(-200%, -50%) skewX(60deg);
   visibility: hidden;
 }
 
-.account .changeForm:checked ~ form.signup {
+.account input.changeForm:checked ~ form.signup {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   visibility: visible;

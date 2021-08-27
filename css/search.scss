@@ -30,7 +30,7 @@ div.main{
     main{
         width: 75%;
         margin: 0 1em;
-        & > div{
+        & > div:first-child{
             display: flex;
             align-items: center;
             & > div{
@@ -38,6 +38,7 @@ div.main{
                     display: flex;
                     margin-right: auto;
                     align-items: center;
+                    z-index: 999;
                 }
             }
         }

@@ -42,7 +42,7 @@ div.main main {
   margin: 0 1em;
 }
 
-div.main main > div {
+div.main main > div:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,7 +51,7 @@ div.main main > div {
           align-items: center;
 }
 
-div.main main > div > div:last-child {
+div.main main > div:first-child > div:last-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,6 +59,7 @@ div.main main > div > div:last-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 999;
 }
 
 div.main main .dropdown {
